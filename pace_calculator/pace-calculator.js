@@ -1,33 +1,36 @@
-const paceBtnElem = document.querySelector('.js-pace-submit-button')
-paceBtnElem.addEventListener('click', () => {
-  calculateSpeed();
+const paceMinInputElem = document.querySelector('.js-pace-min');
+const paceSecInputElem = document.querySelector('.js-pace-sec')
+const speedInputElem = document.querySelector('.js-speed-input');
+
+paceMinInputElem.addEventListener('input', () => {
+  speedInputElem.value = calculateSpeed();
 });
-
-const speedBtnElem = document.querySelector('.js-speed-submit-button')
-speedBtnElem.addEventListener('click', () => {
-  calculatePace();
+paceSecInputElem.addEventListener('input', () => {
+  speedInputElem.value = calculateSpeed();
 });
+speedInputElem.addEventListener('input', () => {
+  const [paceMin, paceSec] = calculatePace();
+  console.log(paceMin);
+  paceMinInputElem.value = paceMin;
+  paceSecInputElem.value = paceSec;
+})
 
-function getValue(unit) {
-  const inputValue = document.querySelector(`.js-${unit}-input`).value;
-  return inputValue;
-}
-
+//CALCULATIONS
 function calculateSpeed() {
-  const inputValue = getValue('pace');
-  const speed = 60 / inputValue;
-  console.log(speed);
+  const inputMin = Number(paceMinInputElem.value);
+  const inputSec = Number(paceSecInputElem.value);
+  return (60 / (inputMin + (inputSec / 60))).toFixed(2);
 }
 
 function calculatePace() {
-  const inputValue = getValue('speed');
+  const inputValue = Number(speedInputElem.value);
+  console.log(inputValue);
   const paceDecimal = 60 / inputValue;
   //převod času z desetin na formát min+s
-  console.log(paceDecimal);
   const paceMin = Math.trunc(paceDecimal);
-  const paceSec = Math.round(getDecimalPart(paceDecimal) * 60);
-  const pace = `${paceMin}\'${paceSec}\"` 
-  console.log(pace);
+  const paceSec = (Math.round(getDecimalPart(paceDecimal) * 60)).toString().padStart(2, '0');
+  console.log([paceMin, paceSec]);
+  return [paceMin, paceSec];
 }
 
 function getDecimalPart(num) {

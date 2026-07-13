@@ -4,5 +4,9 @@ body {
 }
 
 .input-rectangle {
-  width: 40px;
+  width: 80px;
+}
+
+.pace-input-rectangle {
+  width: 30px;
 }
