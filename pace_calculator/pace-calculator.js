@@ -10,7 +10,6 @@ paceSecInputElem.addEventListener('input', () => {
 });
 speedInputElem.addEventListener('input', () => {
   const [paceMin, paceSec] = calculatePace();
-  console.log(paceMin);
   paceMinInputElem.value = paceMin;
   paceSecInputElem.value = paceSec;
 })
@@ -23,19 +22,13 @@ function calculateSpeed() {
 }
 
 function calculatePace() {
-  const inputValue = Number(speedInputElem.value);
-  console.log(inputValue);
-  const paceDecimal = 60 / inputValue;
-  //převod času z desetin na formát min+s
+  const speed = Number(speedInputElem.value);
+  const paceDecimal = 60 / speed;
   const paceMin = Math.trunc(paceDecimal);
-  const paceSec = (Math.round(getDecimalPart(paceDecimal) * 60)).toString().padStart(2, '0');
-  console.log([paceMin, paceSec]);
+  const paceSec = Math.round((paceDecimal % 1) * 60).toString().padStart(2, '0');
   return [paceMin, paceSec];
 }
 
-function getDecimalPart(num) {
-  return num - Math.trunc(num);
-}
 
 
 
