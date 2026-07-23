@@ -108,7 +108,7 @@ input:focus {
 }
 
 /* Obal pro samotná tlačítka */
-.currency-toggle {
+.toggle {
   display: flex;
   background-color: var(--bg-color);
   border-radius: 6px;
@@ -117,12 +117,12 @@ input:focus {
 }
 
 /* Skrytí výchozích kroužků u radio buttonů */
-.currency-toggle input[type="radio"] {
+.toggle input[type="radio"] {
   display: none;
 }
 
 /* Stylování popisků, aby vypadaly jako tlačítka */
-.currency-toggle label {
+.toggle label {
   cursor: pointer;
   padding: 4px 10px;
   font-size: 0.75rem;
@@ -134,12 +134,12 @@ input:focus {
 }
 
 /* Efekt při najetí myší */
-.currency-toggle label:hover {
+.toggle label:hover {
   color: var(--text-main);
 }
 
 /* Zvýraznění aktuálně vybrané měny (kouzlo pomocí :checked) */
-.currency-toggle label.is-active {
+.toggle label.is-active {
   background-color: var(--card-bg);
   color: var(--primary);
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);

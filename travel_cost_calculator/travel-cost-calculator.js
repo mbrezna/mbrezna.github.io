@@ -6,7 +6,7 @@ let fuelPrice = 0;
 
 const distanceInputElem = document.querySelector('.js-distance');
 const consumptionInputElem = document.querySelector('.js-consumption');
-const fuelPriceInptuElem = document.querySelector('.js-fuel-price');
+const fuelPriceInputElem = document.querySelector('.js-fuel-price');
 
 distanceInputElem.addEventListener('change', () => {
   distance = Number(distanceInputElem.value);
@@ -16,9 +16,65 @@ consumptionInputElem.addEventListener('change', () => {
   consumption = Number(consumptionInputElem.value);
   calculate();
 });
-fuelPriceInptuElem.addEventListener('change', () => {
-  fuelPrice = Number(fuelPriceInptuElem.value);
+fuelPriceInputElem.addEventListener('change', () => {
+  fuelPrice = Number(fuelPriceInputElem.value);
   calculate();
+});
+
+//DISTANCE UNITS SELECTION
+const distanceUnitsInputElems = document.querySelectorAll('.js-distance-input');
+let chosenDistanceUnit = 'kms';
+
+distanceUnitsInputElems.forEach((element) => {
+  element.addEventListener('click', () => {
+    //switching buttons
+    document.querySelector('.js-distance-input.is-active').classList.remove('is-active');
+    element.classList.add('is-active');
+
+    //switching related consumption unit
+    chosenDistanceUnit = element.dataset.distance;
+    if (chosenDistanceUnit === 'kms') {
+      document.querySelector('.js-consumption-input.is-active').classList.remove('is-active');
+      document.querySelector('.js-l100km-unit').classList.add('is-active');
+    } else if (chosenDistanceUnit === 'miles') {
+      document.querySelector('.js-consumption-input.is-active').classList.remove('is-active');
+      document.querySelector('.js-mpg-unit').classList.add('is-active');
+    }
+
+    //update input placeholders when changing units
+    
+    //distanceInputElem.placeholder = currencies[chosenCurrency].placeholder;
+
+    //calculate();
+  });
+});
+
+//CONSUMPTION MEASUREMENT SYSTEM SELECTION
+const consumptionUnitsInputElems = document.querySelectorAll('.js-consumption-input');
+let chosenConsumptionUnit = 'l/100km';
+
+consumptionUnitsInputElems.forEach((element) => {
+  element.addEventListener('click', () => {
+    //switching buttons
+    document.querySelector('.js-consumption-input.is-active').classList.remove('is-active');
+    element.classList.add('is-active');
+
+    //switching related consumption unit
+    chosenConsumptionUnit = element.dataset.consumption;
+    if (chosenConsumptionUnit === 'l100km') {
+      document.querySelector('.js-distance-input.is-active').classList.remove('is-active');
+      document.querySelector('.js-kms-unit').classList.add('is-active');
+    } else if (chosenConsumptionUnit === 'mpg') {
+      document.querySelector('.js-distance-input.is-active').classList.remove('is-active');
+      document.querySelector('.js-miles-unit').classList.add('is-active');
+    }
+
+    //update input placeholders when changing units
+    //chosenCurrency = element.dataset.currency;
+    //fuelPriceInputElem.placeholder = currencies[chosenCurrency].placeholder;
+
+    //calculate();
+  });
 });
 
 //CURRENCY SELECTION
@@ -28,12 +84,12 @@ let chosenCurrency = 'czk';
 currencyInputElems.forEach((element) => {
   element.addEventListener('click', () => {
     //switching buttons
-    document.querySelector('.is-active').classList.remove('is-active');
+    document.querySelector('.js-currency-input.is-active').classList.remove('is-active');
     element.classList.add('is-active');
 
     //update input placeholders when changing currency
     chosenCurrency = element.dataset.currency;
-    fuelPriceInptuElem.placeholder = currencies[chosenCurrency].placeholder;
+    fuelPriceInputElem.placeholder = currencies[chosenCurrency].placeholder;
 
     calculate();
   });

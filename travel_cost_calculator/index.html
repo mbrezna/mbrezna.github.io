@@ -12,12 +12,32 @@
       <p class="subtitle">Use this page to estimate travel expenses.</p>
       
       <div class="input-group">
-        <label for="distance">distance</label>
+        <div class="label-row">
+          <label for="distance">distance</label>
+
+          <div class="toggle">
+            <input type="radio" id="kms" name="distance" value="kms">
+            <label for="kms" class="js-distance-input js-kms-unit is-active" data-distance="kms">KMs</label>
+            
+            <input type="radio" id="miles" name="distance" value="miles">
+            <label for="miles" class="js-distance-input js-miles-unit" data-distance="miles">MILES</label>
+          </div>
+        </div>
         <input type="number" class="js-distance" placeholder="e.g. 150">
       </div>
       
       <div class="input-group">
-        <label for="consumption">average fuel consumption</label>
+        <div class="label-row">
+          <label for="consumption">average fuel consumption</label>
+
+          <div class="toggle">
+            <input type="radio" id="l100km" name="consumption" value="l/100km">
+            <label for="l100km" class="js-consumption-input js-l100km-unit is-active" data-consumption="l100km">l/100km</label>
+            
+            <input type="radio" id="mpg" name="consumption" value="mpg">
+            <label for="mpg" class="js-consumption-input js-mpg-unit" data-consumption="mpg">MPG</label>
+          </div>
+        </div>
         <input type="number" class="js-consumption" placeholder="e.g. 6.5">
       </div>
       
@@ -25,8 +45,8 @@
         <div class="label-row">
           <label for="fuel-price">fuel price</label>
 
-          <div class="currency-toggle">
-            <input type="radio" id="czk" name="currency" value="czk" checked>
+          <div class="toggle">
+            <input type="radio" id="czk" name="currency" value="czk">
             <label for="czk" class="js-currency-input is-active" data-currency="czk">CZK</label>
             
             <input type="radio" id="eur" name="currency" value="eur">
@@ -41,8 +61,8 @@
       </div>
       
       <div class="results">
-        <p>fuel consumption:<strong class="js-out-consumption">0 L</strong> </p>
-        <p>travel expenses: <strong class="js-out-expenses">0</strong></p>
+        <p>fuel consumption:<strong class="js-out-consumption">- L</strong> </p>
+        <p>travel expenses: <strong class="js-out-expenses">-</strong></p>
         <!-- MOŽNOST PŘIDAT PŘEPOČET KOLIK KORUN STOJÍ JEDEN KM JÍZDY <p>Kč za Km: <strong class="js-out-expenses">0</strong></p> -->
       </div>
       
