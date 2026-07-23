@@ -23,7 +23,7 @@
             <label for="miles" class="js-distance-input js-miles-unit" data-distance="miles">MILES</label>
           </div>
         </div>
-        <input type="number" class="js-distance" placeholder="e.g. 150">
+        <input type="number" min="0" class="js-distance" placeholder="e.g. 150">
       </div>
       
       <div class="input-group">
@@ -38,7 +38,7 @@
             <label for="mpg" class="js-consumption-input js-mpg-unit" data-consumption="mpg">MPG</label>
           </div>
         </div>
-        <input type="number" class="js-consumption" placeholder="e.g. 6.5">
+        <input type="number" min="0" class="js-consumption" placeholder="e.g. 6.5">
       </div>
       
       <div class="input-group">
@@ -50,19 +50,19 @@
             <label for="czk" class="js-currency-input is-active" data-currency="czk">CZK</label>
             
             <input type="radio" id="eur" name="currency" value="eur">
-            <label for="eur" class="js-currency-input" data-currency="eur">EUR</label>
+            <label for="eur" class="js-currency-input js-eur-currency" data-currency="eur">EUR</label>
             
             <input type="radio" id="usd" name="currency" value="usd">
-            <label for="usd" class="js-currency-input" data-currency="usd">USD</label>
+            <label for="usd" class="js-currency-input js-usd-currency" data-currency="usd">USD</label>
           </div>
         </div>
 
-        <input type="number" class="js-fuel-price" placeholder="e.g. 38.5">
+        <input type="number" min="0" class="js-fuel-price" placeholder="e.g. 38.5">
       </div>
       
       <div class="results">
-        <p>fuel consumption:<strong class="js-out-consumption">- L</strong> </p>
-        <p>travel expenses: <strong class="js-out-expenses">-</strong></p>
+        <p>fuel consumption:<strong class="js-out-consumption"></strong> </p>
+        <p>travel expenses: <strong class="js-out-expenses"></strong></p>
         <!-- MOŽNOST PŘIDAT PŘEPOČET KOLIK KORUN STOJÍ JEDEN KM JÍZDY <p>Kč za Km: <strong class="js-out-expenses">0</strong></p> -->
       </div>
       

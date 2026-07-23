@@ -12,3 +12,21 @@ export const currencies = {
     unit: '$'
   }
 };
+
+export const consumptionUnits = {
+  l100km: {
+    placeholder: 'e.g. 6.5',
+    unit: 'l'
+  },
+  mpg: {
+    placeholder: 'e.g. 30',
+    unit: 'gal'
+  }
+};
+
+export const linkedUnits = {
+  'kms': '.js-l100km-unit',
+  'miles': '.js-mpg-unit',
+  'l100km': '.js-kms-unit',
+  'mpg': '.js-miles-unit'
+}
