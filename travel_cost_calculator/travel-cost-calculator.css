@@ -139,7 +139,7 @@ input:focus {
 }
 
 /* Zvýraznění aktuálně vybrané měny (kouzlo pomocí :checked) */
-.currency-toggle input[type="radio"]:checked + label {
+.currency-toggle label.is-active {
   background-color: var(--card-bg);
   color: var(--primary);
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
