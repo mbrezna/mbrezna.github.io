@@ -95,6 +95,11 @@ currencyInputElems.forEach((element) => {
   });
 });
 
+function activateButton(groupSelector, elementToActivate) {
+  document.querySelector(`.js-${groupSelector}-input.is-active`).classList.remove('is-active');
+  elementToActivate.classList.add('is-active');
+}
+
 function calculate() {
   const fuelConsumption = ((distance / 100) * consumption);
   const travelExpenses = (fuelConsumption * fuelPrice);
