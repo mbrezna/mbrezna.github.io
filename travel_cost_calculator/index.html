@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="travel-cost-calculator.css">
+    <title>Travel Cost Calculator</title>
+  </head>
+  <body>
+    <main class="calculator-card">
+      <h1>Travel Cost Calculator</h1>
+      <p class="subtitle">Use this page to estimate travel expenses.</p>
+      
+      <div class="input-group">
+        <label for="distance">distance</label>
+        <input type="number" class="js-distance" placeholder="e.g. 150">
+      </div>
+      
+      <div class="input-group">
+        <label for="consumption">average fuel consumption</label>
+        <input type="number" class="js-consumption" placeholder="e.g. 6.5">
+      </div>
+      
+      <div class="input-group">
+        <div class="label-row">
+          <label for="fuel-price">fuel price</label>
+
+          <div class="currency-toggle">
+            <input type="radio" class="czk js-currency-input-czk" name="currency" value="czk" checked>
+            <label for="czk">CZK</label>
+            
+            <input type="radio" class="eur js-currency-input-eur" name="currency" value="eur">
+            <label for="eur">EUR</label>
+            
+            <input type="radio" class="usd js-currency-input-usd" name="currency" value="usd">
+            <label for="usd">USD</label>
+          </div>
+        </div>
+
+        <input type="number" class="js-fuel-price" placeholder="e.g. 38.5">
+      </div>
+      
+      <div class="results">
+        <p>fuel consumption:<strong class="js-out-consumption">0 L</strong> </p>
+        <p>travel expenses: <strong class="js-out-expenses">0</strong></p>
+        <p>Kč za Km: <strong class="js-out-expenses">0</strong></p>
+      </div>
+      
+    </main>
+
+    <script src="travel-cost-calculator.js"></script>
+  </body>
+</html>
