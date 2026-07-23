@@ -26,6 +26,12 @@ currencyInputElems.forEach((element) => {
   element.addEventListener('click', () => {
     document.querySelector('.is-active').classList.remove('is-active');
     element.classList.add('is-active');
+
+    const chosenCurrency = element.dataset.currency;
+
+    if (chosenCurrency === 'czk') fuelPriceInptuElem.placeholder = 'e.g. 38.5';
+    else if (chosenCurrency === 'eur') fuelPriceInptuElem.placeholder = 'e.g. 1.52';
+    else if (chosenCurrency === 'usd') fuelPriceInptuElem.placeholder = 'e.g. 3.55';
   });
 });
 
