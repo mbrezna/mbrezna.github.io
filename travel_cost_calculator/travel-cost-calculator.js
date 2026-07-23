@@ -49,6 +49,20 @@ distanceUnitsInputElems.forEach((element) => {
   });
 });
 
+//ROUND TRIP
+const roundTripInputElem = document.querySelector('.js-round-trip');
+let isChecked;
+roundTripInputElem.addEventListener('click', () => {
+  if (!isChecked) {
+    roundTripInputElem.classList.add('is-active');
+    isChecked = true;
+  } else if (isChecked) {
+    roundTripInputElem.classList.remove('is-active');
+    isChecked = false;
+  }
+  calculate();
+});
+
 //CONSUMPTION MEASUREMENT SYSTEM SELECTION
 const consumptionUnitsInputElems = document.querySelectorAll('.js-consumption-input');
 
@@ -96,8 +110,13 @@ function calculate() {
     if (chosenConsumptionUnit === 'l100km') fuelConsumption = ((distance / 100) * consumption);
     else if (chosenConsumptionUnit === 'mpg') fuelConsumption = (distance / consumption);
   }
+  let travelExpenses = (fuelConsumption * fuelPrice);
 
-  const travelExpenses = (fuelConsumption * fuelPrice);
+  if (isChecked) {
+    fuelConsumption *= 2;
+    travelExpenses *= 2;
+  }
+
   const results = {
     fuelConsumption,
     travelExpenses,

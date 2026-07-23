@@ -145,6 +145,7 @@ input:focus {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
+/* Round trip checkbox */
 .checkbox-row {
   display: flex; 
   align-items: center; 
@@ -158,11 +159,48 @@ input:focus {
   cursor: pointer;
 }
 
-.passengers-expenses {
+/* 1. Základní (neaktivní) stav checkboxu */
+.round-trip-input {
+  /* Vypne výchozí systémový vzhled */
+  appearance: none; 
+  -webkit-appearance: none; 
+  
+  /* Nakreslíme si vlastní čtvereček */
+  width: 3px;
+  height: 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative; /* Důležité pro vycentrování fajfky později */
+  background-color: white;
+}
+
+/* 2. Aktivní stav (když tvůj JS přidá třídu is-active) */
+.round-trip-input.is-active {
+  background-color: #007bff; /* Nebo jakákoliv tvá hlavní barva */
+  border-color: #007bff;
+}
+
+/* 3. Nakreslení "fajfky" uvnitř aktivního checkboxu */
+.round-trip-input.is-active::after {
+  content: "✔"; /* Znak fajfky */
+  color: white;
+  font-size: 18px;
+  
+  /* Vycentrování přesně doprostřed */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Cestující */
+.results .passengers-expenses {
   display: none; 
   font-size: 0.9rem; 
 }
 
-.passengers-active {
+.results .passengers-expenses.is-visible {
   display: initial;
 }
+
