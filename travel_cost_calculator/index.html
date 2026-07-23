@@ -23,7 +23,13 @@
             <label for="miles" class="js-distance-input js-miles-unit" data-distance="miles">MILES</label>
           </div>
         </div>
+
         <input type="number" min="0" class="js-distance" placeholder="e.g. 150">
+        
+        <div class="checkbox-row">
+          <input type="checkbox" id="round-trip" class="js-round-trip">
+          <label for="round-trip" class="round-trip-label">round trip</label>
+        </div>
       </div>
       
       <div class="input-group">
@@ -59,10 +65,22 @@
 
         <input type="number" min="0" class="js-fuel-price" placeholder="e.g. 38.5">
       </div>
+
+      <div class="input-group">
+        <div class="label-row">
+          <label for="passengers">passengers</label>
+        </div>
+        <input type="number" id="passengers" class="js-passengers" value="1" min="1">
+      </div>
       
       <div class="results">
         <p>fuel consumption:<strong class="js-out-consumption"></strong> </p>
+
         <p>travel expenses: <strong class="js-out-expenses"></strong></p>
+
+        <p class="passengers-expenses js-per-person-row">
+        cost per person: <strong class="js-out-per-person">-</strong>
+        </p>
         <!-- MOŽNOST PŘIDAT PŘEPOČET KOLIK KORUN STOJÍ JEDEN KM JÍZDY <p>Kč za Km: <strong class="js-out-expenses">0</strong></p> -->
       </div>
       

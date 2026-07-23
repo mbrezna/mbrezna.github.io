@@ -138,9 +138,31 @@ input:focus {
   color: var(--text-main);
 }
 
-/* Zvýraznění aktuálně vybrané měny (kouzlo pomocí :checked) */
+/* Zvýraznění aktuálně vybrané měny */
 .toggle label.is-active {
   background-color: var(--card-bg);
   color: var(--primary);
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.checkbox-row {
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+  margin-top: 10px; 
+  font-size: 0.3rem; 
+  color: var(--text-main);
+}
+
+.round-trip-label {
+  cursor: pointer;
+}
+
+.passengers-expenses {
+  display: none; 
+  font-size: 0.9rem; 
+}
+
+.passengers-active {
+  display: initial;
 }
