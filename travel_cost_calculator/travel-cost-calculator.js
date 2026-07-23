@@ -19,24 +19,14 @@ fuelPriceInptuElem.addEventListener('change', () => {
   calculate();
 });
 
-const currencyInputElemCZK = document.querySelector('.js-currency-input-czk');
-const currencyInputElemEUR = document.querySelector('.js-currency-input-eur');
-const currencyInputElemUSD = document.querySelector('.js-currency-input-usd');
+//switching buttons for currency
+const currencyInputElems = document.querySelectorAll('.js-currency-input');
 
-currencyInputElemCZK.addEventListener('click', () => {
-  currencyInputElemCZK.classList.add('is-active');
-  currencyInputElemEUR.classList.remove('is-active');
-  currencyInputElemUSD.classList.remove('is-active');
-});
-currencyInputElemEUR.addEventListener('click', () => {
-  currencyInputElemEUR.classList.add('is-active');
-  currencyInputElemCZK.classList.remove('is-active');
-  currencyInputElemUSD.classList.remove('is-active');
-});
-currencyInputElemUSD.addEventListener('click', () => {
-  currencyInputElemUSD.classList.add('is-active');
-  currencyInputElemEUR.classList.remove('is-active');
-  currencyInputElemCZK.classList.remove('is-active');
+currencyInputElems.forEach((element) => {
+  element.addEventListener('click', () => {
+    document.querySelector('.is-active').classList.remove('is-active');
+    element.classList.add('is-active');
+  });
 });
 
 function calculate() {
