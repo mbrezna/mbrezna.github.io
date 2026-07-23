@@ -1,3 +1,5 @@
+import { currencies } from "./data.js";
+
 let distance = 0;
 let consumption = 0;
 let fuelPrice = 0;
@@ -19,39 +21,47 @@ fuelPriceInptuElem.addEventListener('change', () => {
   calculate();
 });
 
-//switching buttons for currency
+//CURRENCY SELECTION
 const currencyInputElems = document.querySelectorAll('.js-currency-input');
+let chosenCurrency = 'czk';
 
 currencyInputElems.forEach((element) => {
   element.addEventListener('click', () => {
+    //switching buttons
     document.querySelector('.is-active').classList.remove('is-active');
     element.classList.add('is-active');
 
-    const chosenCurrency = element.dataset.currency;
+    //update input placeholders when changing currency
+    chosenCurrency = element.dataset.currency;
+    fuelPriceInptuElem.placeholder = currencies[chosenCurrency].placeholder;
 
-    if (chosenCurrency === 'czk') fuelPriceInptuElem.placeholder = 'e.g. 38.5';
-    else if (chosenCurrency === 'eur') fuelPriceInptuElem.placeholder = 'e.g. 1.52';
-    else if (chosenCurrency === 'usd') fuelPriceInptuElem.placeholder = 'e.g. 3.55';
+    calculate();
   });
 });
 
 function calculate() {
   const fuelConsumption = ((distance / 100) * consumption);
   const travelExpenses = (fuelConsumption * fuelPrice);
+  const results = {
+    fuelConsumption,
+    travelExpenses,
+  }
+  displayResults(results);
+}
 
-  console.log(fuelConsumption);
-  if (fuelConsumption === 0) {
+function displayResults(results) {
+  if (results.fuelConsumption === 0) {
     document.querySelector('.js-out-consumption').innerHTML = 'missing parameters';
     document.querySelector('.js-out-expenses').innerHTML = 'missing parameters';
     return;
   }
-  else if (travelExpenses === 0) {
-    document.querySelector('.js-out-consumption').innerHTML = `${fuelConsumption.toFixed(2)} L`;
+  else if (results.travelExpenses === 0) {
+    document.querySelector('.js-out-consumption').innerHTML = `${results.fuelConsumption.toFixed(2)} L`;
     document.querySelector('.js-out-expenses').innerHTML = 'missing parameters';
     return;
   } else {
-    document.querySelector('.js-out-consumption').innerHTML = `${fuelConsumption.toFixed(2)} L`;
-    document.querySelector('.js-out-expenses').innerHTML = `${travelExpenses.toFixed(2)} Kč`;
+    document.querySelector('.js-out-consumption').innerHTML = `${results.fuelConsumption.toFixed(2)} L`;
+    document.querySelector('.js-out-expenses').innerHTML = `${results.travelExpenses.toFixed(2)} ${currencies[chosenCurrency].unit}`;
   }
 }
 
