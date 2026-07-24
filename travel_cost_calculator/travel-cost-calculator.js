@@ -1,15 +1,18 @@
 import { currencies, consumptionUnits, linkedUnits } from "./data.js";
 
+//INPUT VARIABLES
 let distance = 0;
 let consumption = 0;
 let fuelPrice = 0;
 let passengers = 1;
 
+//INPUT ELEMENTS
 const distanceInputElem = document.querySelector('.js-distance');
 const consumptionInputElem = document.querySelector('.js-consumption');
 const fuelPriceInputElem = document.querySelector('.js-fuel-price');
 const passengersInputElem = document.querySelector('.js-passengers');
 
+//CHOSEN UNITS AND CURRENCY
 let chosenDistanceUnit = 'kms';
 let chosenConsumptionUnit = 'l100km';
 let chosenCurrency = 'czk';
@@ -31,7 +34,6 @@ passengersInputElem.addEventListener('input', () => {
   calculate();
 });
 
-
 //DISTANCE UNITS SELECTION
 const distanceUnitsInputElems = document.querySelectorAll('.js-distance-input');
 
@@ -40,13 +42,12 @@ distanceUnitsInputElems.forEach((element) => {
     //switching buttons
     activateButton('js-distance-input', element);
     chosenDistanceUnit = element.dataset.distance;
+
     //update chosenDistanceUnit
     if (chosenDistanceUnit === 'kms') chosenConsumptionUnit = 'l100km';
     else if (chosenDistanceUnit === 'miles') chosenConsumptionUnit = 'mpg';
 
-    //switch to related units
-    const elementToActivate = document.querySelector(linkedUnits[chosenDistanceUnit]);
-    activateButton('js-consumption-input', elementToActivate);
+    switchRelatedUnits('consumption', chosenDistanceUnit);
 
     //update input placeholders when changing units
     if (chosenDistanceUnit === 'miles') consumptionInputElem.placeholder = consumptionUnits.mpg.placeholder;
@@ -79,9 +80,11 @@ consumptionUnitsInputElems.forEach((element) => {
     activateButton('js-consumption-input', element);
     chosenConsumptionUnit = element.dataset.consumption;
 
-    //switch to related units
-    const elementToActivate = document.querySelector(linkedUnits[chosenConsumptionUnit]);
-    activateButton('js-distance-input', elementToActivate);
+    //update chosenDistanceUnit
+    if (chosenConsumptionUnit === 'l100km') chosenDistanceUnit = 'kms';
+    else if (chosenConsumptionUnit === 'mpg') chosenDistanceUnit = 'miles';
+
+    switchRelatedUnits('distance', chosenConsumptionUnit);
 
     //update input placeholders when changing units
     consumptionInputElem.placeholder = consumptionUnits[chosenConsumptionUnit].placeholder;
@@ -97,14 +100,19 @@ currencyInputElems.forEach((element) => {
   element.addEventListener('click', () => {
     //switching buttons
     activateButton('js-currency-input', element);
+    chosenCurrency = element.dataset.currency;
 
     //update input placeholders when changing currency
-    chosenCurrency = element.dataset.currency;
     fuelPriceInputElem.placeholder = currencies[chosenCurrency].placeholder;
 
     calculate();
   });
 });
+
+function switchRelatedUnits(what, from) {
+  const elementToActivate = document.querySelector(linkedUnits[from]);
+  activateButton(`js-${what}-input`, elementToActivate);
+}
 
 function activateButton(groupSelector, elementToActivate) {
   document.querySelector(`.${groupSelector}.is-active`).classList.remove('is-active');
@@ -113,10 +121,12 @@ function activateButton(groupSelector, elementToActivate) {
 
 function calculate() {
   let fuelConsumption = 0;
+
   if (distance > 0 && consumption > 0) {
     if (chosenConsumptionUnit === 'l100km') fuelConsumption = ((distance / 100) * consumption);
     else if (chosenConsumptionUnit === 'mpg') fuelConsumption = (distance / consumption);
   }
+
   let travelExpenses = (fuelConsumption * fuelPrice);
 
   if (isChecked) {
@@ -135,27 +145,29 @@ function calculate() {
 }
 
 function displayResults(results) {
-  if (passengers > 1) {
-    document.querySelector('.js-per-person-row').classList.add('is-visible');
-  } else if (passengers === 1) {
-    document.querySelector('.js-per-person-row').classList.remove('is-visible');
-  }
-  
+  const consumptionOutputElem = document.querySelector('.js-out-consumption');
+  const expensesOutputElem = document.querySelector('.js-out-expenses');
+  const perPersonRowElem = document.querySelector('.js-per-person-row');
+  const perPersonOutputElem = document.querySelector('.js-out-per-person');
+
+  if (passengers > 1) perPersonRowElem.classList.add('is-visible');
+  else if (passengers === 1) perPersonRowElem.classList.remove('is-visible');
+
   if (results.fuelConsumption === 0) {
-    document.querySelector('.js-out-consumption').innerHTML = 'missing parameters';
-    document.querySelector('.js-out-expenses').innerHTML = 'missing parameters';
-    document.querySelector('.js-out-per-person').innerHTML = 'missing parameters';
+    consumptionOutputElem.innerHTML = 'missing parameters';
+    expensesOutputElem.innerHTML = 'missing parameters';
+    perPersonOutputElem.innerHTML = 'missing parameters';
     return;
   }
   else if (results.travelExpenses === 0) {
-    document.querySelector('.js-out-consumption').innerHTML = `${results.fuelConsumption.toFixed(2)} ${consumptionUnits[chosenConsumptionUnit].unit}`;
-    document.querySelector('.js-out-expenses').innerHTML = 'missing parameters';
-    document.querySelector('.js-out-per-person').innerHTML = 'missing parameters';
+    consumptionOutputElem.innerHTML = `${results.fuelConsumption.toFixed(2)} ${consumptionUnits[chosenConsumptionUnit].unit}`;
+    expensesOutputElem.innerHTML = 'missing parameters';
+    perPersonOutputElem.innerHTML = 'missing parameters';
     return;
   } else {
-    document.querySelector('.js-out-consumption').innerHTML = `${results.fuelConsumption.toFixed(2)} ${consumptionUnits[chosenConsumptionUnit].unit}`;
-    document.querySelector('.js-out-expenses').innerHTML = `${results.travelExpenses.toFixed(2)} ${currencies[chosenCurrency].unit}`;
-    document.querySelector('.js-out-per-person').innerHTML = `${results.expensesPerPerson.toFixed(2)} ${currencies[chosenCurrency].unit}`;
+    consumptionOutputElem.innerHTML = `${results.fuelConsumption.toFixed(2)} ${consumptionUnits[chosenConsumptionUnit].unit}`;
+    expensesOutputElem.innerHTML = `${results.travelExpenses.toFixed(2)} ${currencies[chosenCurrency].unit}`;
+    perPersonOutputElem.innerHTML = `${results.expensesPerPerson.toFixed(2)} ${currencies[chosenCurrency].unit}`;
   }
 }
 

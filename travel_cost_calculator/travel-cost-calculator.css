@@ -196,11 +196,10 @@ input:focus {
 
 /* Cestující */
 .results .passengers-expenses {
-  display: none; 
-  font-size: 0.9rem; 
+  display: none;
 }
 
 .results .passengers-expenses.is-visible {
-  display: initial;
+  display: flex;
 }
 
