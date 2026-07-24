@@ -3,10 +3,12 @@ import { currencies, consumptionUnits, linkedUnits } from "./data.js";
 let distance = 0;
 let consumption = 0;
 let fuelPrice = 0;
+let passengers = 1;
 
 const distanceInputElem = document.querySelector('.js-distance');
 const consumptionInputElem = document.querySelector('.js-consumption');
 const fuelPriceInputElem = document.querySelector('.js-fuel-price');
+const passengersInputElem = document.querySelector('.js-passengers');
 
 let chosenDistanceUnit = 'kms';
 let chosenConsumptionUnit = 'l100km';
@@ -24,6 +26,11 @@ fuelPriceInputElem.addEventListener('input', () => {
   fuelPrice = Number(fuelPriceInputElem.value);
   calculate();
 });
+passengersInputElem.addEventListener('input', () => {
+  passengers = Number(passengersInputElem.value);
+  calculate();
+});
+
 
 //DISTANCE UNITS SELECTION
 const distanceUnitsInputElems = document.querySelectorAll('.js-distance-input');
@@ -117,26 +124,38 @@ function calculate() {
     travelExpenses *= 2;
   }
 
+  const expensesPerPerson = travelExpenses / passengers;
+
   const results = {
     fuelConsumption,
     travelExpenses,
+    expensesPerPerson
   }
   displayResults(results);
 }
 
 function displayResults(results) {
+  if (passengers > 1) {
+    document.querySelector('.js-per-person-row').classList.add('is-visible');
+  } else if (passengers === 1) {
+    document.querySelector('.js-per-person-row').classList.remove('is-visible');
+  }
+  
   if (results.fuelConsumption === 0) {
     document.querySelector('.js-out-consumption').innerHTML = 'missing parameters';
     document.querySelector('.js-out-expenses').innerHTML = 'missing parameters';
+    document.querySelector('.js-out-per-person').innerHTML = 'missing parameters';
     return;
   }
   else if (results.travelExpenses === 0) {
     document.querySelector('.js-out-consumption').innerHTML = `${results.fuelConsumption.toFixed(2)} ${consumptionUnits[chosenConsumptionUnit].unit}`;
     document.querySelector('.js-out-expenses').innerHTML = 'missing parameters';
+    document.querySelector('.js-out-per-person').innerHTML = 'missing parameters';
     return;
   } else {
     document.querySelector('.js-out-consumption').innerHTML = `${results.fuelConsumption.toFixed(2)} ${consumptionUnits[chosenConsumptionUnit].unit}`;
     document.querySelector('.js-out-expenses').innerHTML = `${results.travelExpenses.toFixed(2)} ${currencies[chosenCurrency].unit}`;
+    document.querySelector('.js-out-per-person').innerHTML = `${results.expensesPerPerson.toFixed(2)} ${currencies[chosenCurrency].unit}`;
   }
 }
 
