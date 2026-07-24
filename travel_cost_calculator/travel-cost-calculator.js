@@ -128,6 +128,7 @@ function calculate() {
   }
 
   let travelExpenses = (fuelConsumption * fuelPrice);
+  const expensesPerDistance = travelExpenses / distance;
 
   if (isChecked) {
     fuelConsumption *= 2;
@@ -139,6 +140,7 @@ function calculate() {
   const results = {
     fuelConsumption,
     travelExpenses,
+    expensesPerDistance,
     expensesPerPerson
   }
   displayResults(results);
@@ -149,6 +151,7 @@ function displayResults(results) {
   const expensesOutputElem = document.querySelector('.js-out-expenses');
   const perPersonRowElem = document.querySelector('.js-per-person-row');
   const perPersonOutputElem = document.querySelector('.js-out-per-person');
+  const perDistanceOutputElem = document.querySelector('.js-out-per-distance');
 
   if (passengers > 1) perPersonRowElem.classList.add('is-visible');
   else if (passengers === 1) perPersonRowElem.classList.remove('is-visible');
@@ -157,17 +160,20 @@ function displayResults(results) {
     consumptionOutputElem.innerHTML = 'missing parameters';
     expensesOutputElem.innerHTML = 'missing parameters';
     perPersonOutputElem.innerHTML = 'missing parameters';
+    perDistanceOutputElem.innerHTML = 'missing parameters';
     return;
   }
   else if (results.travelExpenses === 0) {
     consumptionOutputElem.innerHTML = `${results.fuelConsumption.toFixed(2)} ${consumptionUnits[chosenConsumptionUnit].unit}`;
     expensesOutputElem.innerHTML = 'missing parameters';
     perPersonOutputElem.innerHTML = 'missing parameters';
+    perDistanceOutputElem.innerHTML = 'missing parameters';
     return;
   } else {
     consumptionOutputElem.innerHTML = `${results.fuelConsumption.toFixed(2)} ${consumptionUnits[chosenConsumptionUnit].unit}`;
     expensesOutputElem.innerHTML = `${results.travelExpenses.toFixed(2)} ${currencies[chosenCurrency].unit}`;
     perPersonOutputElem.innerHTML = `${results.expensesPerPerson.toFixed(2)} ${currencies[chosenCurrency].unit}`;
+    perDistanceOutputElem.innerHTML = `${results.expensesPerDistance.toFixed(2)} ${currencies[chosenCurrency].unit}/${chosenDistanceUnit === 'kms' ? 'km' : 'mi'}`;
   }
 }
 
