@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="travel-cost-calculator.css">
-    <title>Travel Cost Calculator</title>
+    <link rel="stylesheet" href="./styles/travel-cost-calculator.css">
+    <title>Travel Cost Calculator (MVC)</title>
   </head>
   <body>
     <main class="calculator-card">
@@ -75,21 +75,12 @@
       
       <div class="results">
         <p>fuel consumption: <strong class="js-out-consumption"></strong></p>
-
         <p>travel expenses: <strong class="js-out-expenses"></strong></p>
-
-        <p class="js-per-distance-row">
-        cost per distance: <strong class="js-out-per-distance"></strong>
-        </p>
-
-        <p class="passengers-expenses js-per-person-row">
-        cost per person: <strong class="js-out-per-person">-</strong>
-        </p>
-        <!-- MOŽNOST PŘIDAT PŘEPOČET KOLIK KORUN STOJÍ JEDEN KM JÍZDY <p>Kč za Km: <strong class="js-out-expenses">0</strong></p> -->
+        <p class="js-per-distance-row">cost per distance: <strong class="js-out-per-distance"></strong></p>
+        <p class="passengers-expenses js-per-person-row">cost per person: <strong class="js-out-per-person">-</strong></p>
       </div>
-      
     </main>
 
-    <script type="module" src="travel-cost-calculator.js"></script>
+    <script type="module" src="./scripts/controller.js"></script>
   </body>
 </html>

@@ -23,10 +23,3 @@ export const consumptionUnits = {
     unit: 'gal'
   }
 };
-
-export const linkedUnits = {
-  'kms': '.js-l100km-unit',
-  'miles': '.js-mpg-unit',
-  'l100km': '.js-kms-unit',
-  'mpg': '.js-miles-unit'
-}
