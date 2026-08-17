@@ -1,0 +1,155 @@
+:root {
+  --bg-color: #f8fafc; /* Velmi jemná světle modro-šedá */
+  --text-main: #0f172a; /* Tmavá břidlicová pro skvělý kontrast */
+  --text-muted: #64748b; /* Světlejší šedá pro doplňující texty */
+  --accent-blue: #2563eb; /* Moderní, výrazná profesionální modrá */
+  --nav-bg: rgba(255, 255, 255, 0.7); /* Poloprůhledná bílá pro menu */
+}
+
+/* --- ZÁKLAD --- */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  padding-top: 120px;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-blue);
+}
+
+/* --- PLOVOUCÍ MENU (Z obrázku 2) --- */
+.main-header {
+  position: fixed;
+  top: 20px;
+  left: 40px;
+  right: 40px;
+
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(12px); /* Efekt rozmazaného skla */
+  -webkit-backdrop-filter: blur(12px);
+  
+  padding: 7px 30px;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.main-header nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.photo-container img {
+  max-width: 300px;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.hero {
+  padding: 60px 5% 40px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.hero-texts {
+  flex: 1;
+}
+
+.hero-subtitle {
+  color: var(--text-main);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.highlight {
+  color: var(--accent-blue);
+}
+
+/* --- SEKCE O MNĚ --- */
+.about {
+  padding: 0 5% 80px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about p {
+  max-width: 700px; /* Omezení šířky textu pro lepší čitelnost */
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 25px;
+}
+
+/* --- PATIČKA --- */
+.main-footer {
+  padding: 40px 5%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer-name {
+  font-weight: 700;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* --- OSOBNÍ MOTTO --- */
+.personal-motto {
+  font-size: 1.35rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--text-main);
+  border-left: 4px solid var(--accent-blue);
+  padding-left: 20px;
+  margin-left: 0;
+  line-height: 1.4;
+  max-width: 700px;
+}
+
+
