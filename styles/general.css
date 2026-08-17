@@ -1,12 +1,15 @@
 :root {
-  --bg-color: #f8fafc; /* Velmi jemná světle modro-šedá */
-  --text-main: #0f172a; /* Tmavá břidlicová pro skvělý kontrast */
-  --text-muted: #64748b; /* Světlejší šedá pro doplňující texty */
-  --accent-blue: #2563eb; /* Moderní, výrazná profesionální modrá */
-  --nav-bg: rgba(255, 255, 255, 0.7); /* Poloprůhledná bílá pro menu */
+  --bg-color: #f8fafc;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --accent-blue: #2563eb;
+  --nav-bg: rgba(255, 255, 255, 0.7);
 }
 
-/* --- ZÁKLAD --- */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--bg-color);
@@ -26,7 +29,6 @@ a:hover {
   color: var(--accent-blue);
 }
 
-/* --- PLOVOUCÍ MENU (Z obrázku 2) --- */
 .main-header {
   position: fixed;
   top: 20px;
@@ -34,7 +36,8 @@ a:hover {
   right: 40px;
 
   background-color: var(--nav-bg);
-  backdrop-filter: blur(12px); /* Efekt rozmazaného skla */
+  /* glass effects */
+  backdrop-filter: blur(12px); 
   -webkit-backdrop-filter: blur(12px);
   
   padding: 7px 30px;
@@ -64,8 +67,12 @@ a:hover {
   color: var(--text-muted);
 }
 
+.photo-container {
+  width: 35%;
+  margin-right: 20px;
+}
 .photo-container img {
-  max-width: 300px;
+  max-width: 350px;
   border-radius: 40px;
   object-fit: cover;
 }
@@ -102,11 +109,14 @@ a:hover {
   color: var(--accent-blue);
 }
 
-/* --- SEKCE O MNĚ --- */
 .about {
   padding: 0 5% 80px 5%;
   max-width: 1200px;
   margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 .about p {
@@ -116,7 +126,6 @@ a:hover {
   margin-bottom: 25px;
 }
 
-/* --- PATIČKA --- */
 .main-footer {
   padding: 40px 5%;
   background-color: #ffffff;
@@ -139,7 +148,36 @@ a:hover {
   color: var(--text-muted);
 }
 
-/* --- OSOBNÍ MOTTO --- */
+.contact-icon {
+  width: 40px;
+}
+
+.contact-link a .contact-icon {
+  fill: var(--text-muted); /* nebo #64748b */
+  transition: fill 0.3s ease;
+}
+
+.contact-link a:hover .contact-icon {
+  fill: var(--accent-blue);
+}
+
+.contact-link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.motto-container {
+  background-color: var(--nav-bg);
+  padding: 7px 30px;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  height: fit-content;
+  flex: 35%;
+
+}
 .personal-motto {
   font-size: 1.35rem;
   font-weight: 500;
