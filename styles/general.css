@@ -1,7 +1,5 @@
 @import url('./layout.css');
-@import url('./hero-section.css');
-@import url('./about.css');
-@import url('./hero.css');
+@import url('./sections.css');
 
 :root {
   --bg-color: #f8fafc;
@@ -31,6 +29,21 @@ a {
 
 a:hover {
   color: var(--accent-blue);
+}
+
+section {
+  padding: 0 100px 80px 5%;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
 }
 
 
