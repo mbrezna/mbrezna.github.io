@@ -15,6 +15,10 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   z-index: 1000;
   border: 1px solid rgba(255, 255, 255, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .main-header nav {
@@ -35,6 +39,32 @@
   font-weight: 500;
   font-size: 1rem;
   color: var(--text-muted);
+}
+
+/* ----LANGUAGE-TOGGLE-------------------------------- */
+.language-toggle {
+  background-color: var(--bg-color);
+  border-radius: 25px;
+  padding: 2px;
+}
+
+.toggle-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 8px 16px;
+  background-color: var(--bg-color);
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.toggle-btn:hover {
+  box-shadow: 0 5px 10px rgba(37, 99, 235, 0.3);
+}
+
+.active-language {
+  background-color: var(--accent-blue);
+  color: white;
 }
 
 /* ----PAGE-FOOTER------------------------------------ */
