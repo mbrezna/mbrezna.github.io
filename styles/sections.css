@@ -2,7 +2,7 @@
   color: var(--accent-blue);
   font-size: 1.8rem;
   font-weight: 800;
-  margin: 0;
+  margin-bottom: 5px;
 }
 
 /* ----HERO-SECTION------------------------------------ */
@@ -51,9 +51,7 @@
 
 /* ----ABOUT-SECTION------------------------------------ */
 .about {
-  padding: 0 5% 0 5%;
   max-width: 1200px;
-  margin: 20px 0 35px 0;
 
   display: flex;
   align-items: center;
@@ -88,22 +86,23 @@
   margin-right: 10px
 }
 
-/* ----EXPERIENCE-SECTION------------------------------------ */
+/* ----EXPERIENCE-&-PROJECTS-SECTION------------------------------------ */
 .experience-title {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-main);
 }
 
-.timeline-item time {
+.timeline-date {
   font-size: 1.05rem;
   font-weight: 400;
   color: var(--text-muted);
 }
 
-#experience p {
+#experience p,
+#projects p {
   color: var(--text-muted);
-  margin-bottom: 15px;
+  max-width: 700px;
 }
 
 .timeline {
@@ -117,12 +116,15 @@
   position: absolute;
   left: 0;
   top: 10px;
-  bottom: 20px;
+  bottom: 29px;
   width: 2px;
 }
 
 .timeline-item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .timeline-item::before {
@@ -146,4 +148,10 @@
   column-gap: 15px;
   row-gap: 0;
   flex-wrap: wrap;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
 }
