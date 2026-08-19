@@ -18,18 +18,18 @@
 			<nav>
         <h1><a href="#hero">Matěj Března</a></h1>
 				<div class="nav-links">
-					<a href="#experience">Experience</a>
-					<a href="#projects">Projects</a>
-					<a href="#education">Education</a>
-					<a href="#contact">Contact</a>
+					<a href="#experience" data-i18n="experienceSection">Experience</a>
+					<a href="#projects" data-i18n="projectsSection">Projects</a>
+					<a href="#education" data-i18n="educationSection">Education</a>
+					<a href="#contact" data-i18n="contactLink">Contact</a>
 				</div>
 			</nav>
 
 			<div class="language-toggle">
-					<button class="toggle-btn active-language">
+					<button class="toggle-btn js-english-btn active-language">
 						EN
 					</button>
-					<button class="toggle-btn">
+					<button class="toggle-btn js-czech-btn">
 						CZ
 					</button>
 				</div>
@@ -38,8 +38,12 @@
 		<main>
 			<section id="hero">
 				<div class="hero-texts">
-					<h2 class="hero-title"><strong class="highlight">Geoinformatics <br>&amp; Cartography</strong> student</h2>
-        	<p class="hero-subtitle">Self-taught in <br><em class="highlight">front-end web technologies</em></p>
+					<h2 class="hero-title" data-i18n="heroTitle">
+						<strong class="highlight">Geoinformatics <br>&amp; Cartography</strong> student
+					</h2>
+        	<p class="hero-subtitle" data-i18n="heroSubtitle">
+						Self-taught in <br><em class="highlight">front-end web technologies</em>
+					</p>
 				</div>
 
 				<div class="photo-container">
@@ -49,44 +53,44 @@
 
 			<section class="about">
 				<div>
-					<p>I am a student of geoinformatics at Palacký University Olomouc, Czechia. For years, I was a competitive cross-country skier with great enthusiasm, but as soon as I started university, my studies took my full attention. The discipline and determination I built during my years in elite sports are qualities I now apply to my studies of geoinformatics and web technologies.</p>
+					<p data-i18n="aboutFirstParagraph">I am a student of geoinformatics at Palacký University Olomouc, Czechia. For years, I was a competitive cross-country skier with great enthusiasm, but as soon as I started university, my studies took my full attention. The discipline and determination I built during my years in elite sports are qualities I now apply to my studies of geoinformatics and web technologies.</p>
 
-					<p>During my studies, I am building a strong foundation in spatial data analysis, GIS and map making. However, because connecting these disciplines with IT is my biggest passion, I spend my free time studying front-end development (HTML, CSS and JavaScript). My next goals are to learn the React framework and dive into back-end development using Python and database systems (SQL/MySQL).</p>
+					<p data-i18n="aboutSecondParagraph">During my studies, I am building a strong foundation in spatial data analysis, GIS and map making. However, because connecting these disciplines with IT is my biggest passion, I spend my free time studying front-end development (HTML, CSS and JavaScript). My next goals are to learn the React framework and dive into back-end development using Python and database systems (SQL/MySQL).</p>
 
-					<p>Currently, I am searching for an internship or a part-time job where I can put my knowledge into practice. I look forward to helping with real projects and gaining new experience.</p>
+					<p data-i18n="aboutThirdParagraph">Currently, I am searching for an internship or a part-time job where I can put my knowledge into practice. I look forward to helping with real projects and gaining new experience.</p>
 				</div>
 
 				<aside class="motto-container">
-					<blockquote class="personal-motto">
+					<blockquote class="personal-motto" data-i18n="personalMotto">
 						"Anything is within reach, as long as your drive is strong enough."
 					</blockquote>
 				</aside>
 			</section>
 
 			<section id="experience">
-				<h2 class="section-title">Experience</h2>
+				<h2 class="section-title" data-i18n="experienceSection">Experience</h2>
 
 				<div class="timeline">
 					<div class="timeline-item">
 						<header>
-							<h3 class="experience-title">International level Cross-Country Skier</h3>
+							<h3 class="experience-title" data-i18n="crossCountryTitle">International level Cross-Country Skier</h3>
 							<div class="timeline-date">
 								<time datetime="2020">2020</time> – <time datetime="2026">2026</time>
 							</div>
 						</header>
 						
-						<p>Balancing a demanding daily training schedule with academic studies taught me how to manage my time effectively. Years of long-term athletic preparation built my goal-oriented mindset.</p>
+						<p data-i18n="crossCountryParagraph">Balancing a demanding daily training schedule with academic studies taught me how to manage my time effectively. Years of long-term athletic preparation built my goal-oriented mindset.</p>
 					</div>
 
 					<div class="timeline-item">
 						<header>
-							<h3 class="experience-title">Field Data Collector</h3>
+							<h3 class="experience-title" data-i18n="questionaryTitle">Field Data Collector</h3>
 							<div class="timeline-date">
-								<time datetime="2025-09">September 2025</time>
+								<time datetime="2025-10" data-i18n="questionaryTime">October 2025</time>
 							</div>
 						</header>
 
-						<p>
+						<p data-i18n="questionaryParagraph">
 							Sustainable Urban Mobility Plan City of Olomouc
 						</p>
 					</div>
@@ -94,76 +98,75 @@
 			</section>
 
 			<section id="projects">
-				<h2 class="section-title">Projects</h2>
+				<h2 class="section-title" data-i18n="projectsSection">Projects</h2>
 				<div class="timeline">
 					<div class="timeline-item">
 						<header>
-							<h3 class="projects-title">Krizová a zdravotnická infrastruktura
-							v Norsku a Švédsku</h3>
+							<h3 class="projects-title" data-i18n="semestralMapTitle">Crisis and health infrastructure in Norway and Sweden</h3>
 							<div class="timeline-date">
-								<time datetime="2026-05">May 2026</time>
+								<time datetime="2026-05" data-i18n="semestralMapTime">May 2026</time>
 							</div>
 						</header>
 						
-						<p>Cartographic project developed within the Digital Cartography course, resulting in a large-format (A2) desk map designed for strategic decision-making by public sector professionals.</p>
+						<p data-i18n="semestralMapParagraph">Cartographic project developed within the Digital Cartography course, resulting in a large-format (A2) desk map designed for strategic decision-making by public sector professionals.</p>
 					</div>
 
 					<div class="timeline-item">
 						<header>
-							<h3 class="projects-title">Travel cost calculator</h3>
+							<h3 class="projects-title" data-i18n="travelCalculatorTitle">Travel cost calculator</h3>
 							<div class="timeline-date">
-								<time datetime="2026-07">July 2026</time>
+								<time datetime="2026-07" data-i18n="travelCalculatorTime">July 2026</time>
 							</div>
 						</header>
 
-						<p>An JavaScript web application built to calculate and share travel expenses. It supports multiple languages and enables unit conversion, saving trip history, and generating QR codes for easy cost splitting. Focused on Vanilla JavaScript, this project helped me gain an understanding of DOM manipulation, event handling, and modules. To ensure clean code organization, I implemented the MVC (Model-View-Controller) architecture.</p>
+						<p data-i18n="travelCalculatorParagraph">An JavaScript web application built to calculate and share travel expenses. It supports multiple languages and enables unit conversion, saving trip history, and generating QR codes for easy cost splitting. Focused on Vanilla JavaScript, this project helped me gain an understanding of DOM manipulation, event handling, and modules. To ensure clean code organization, I implemented the MVC (Model-View-Controller) architecture.</p>
 
 						<div class="project-links">
-							<a class="btn btn-primary" href="https://mbrezna.github.io/travel_cost_calculator/" target="_blank" rel="noopener noreferrer">Live demo</a>
-							<a class="btn btn-secondary" href="https://github.com/mbrezna/travel_cost_calculator" target="_blank" rel="noopener noreferrer">Github repo</a>
+							<a class="btn btn-primary" href="https://mbrezna.github.io/travel_cost_calculator/" target="_blank" rel="noopener noreferrer" data-i18n="liveDemoButton">Live demo</a>
+							<a class="btn btn-secondary" href="https://github.com/mbrezna/travel_cost_calculator" target="_blank" rel="noopener noreferrer" data-i18n="githubRepoButton">Github repo</a>
 						</div>
 					</div>
 
 					<div class="timeline-item">
 						<header>
-							<h3 class="projects-title">Personal web</h3>
+							<h3 class="projects-title" data-i18n="personalWebTitle">Personal web</h3>
 							<div class="timeline-date">
-								<time datetime="2026-08">August 2026</time>
+								<time datetime="2026-08" data-i18n="personalWebTime">August 2026</time>
 							</div>
 						</header>
-						<p>Portfolio in HTML, CSS and JavaScript</p>
+						<p data-i18n="personalWebParagraph">Portfolio in HTML, CSS and JavaScript</p>
 					</div>
 				</div>
 			</section>
 
 			<section id="education">
-				<h2 class="section-title">Education</h2>
+				<h2 class="section-title" data-i18n="educationSection">Education</h2>
 
 				<div class="education-grid">
 					<article class="education-card">
-						<h3 class="education-title">Grammar school Třebíč</h3>
-						<div class="timeline-date">
+						<h3 class="education-title" data-i18n="grammarSchoolTitle">Grammar school Třebíč</h3>
+						<div class="timeline-date" data-i18n="grammarSchoolTime">
 							<time datetime="2017">2017</time> – <time datetime="2025">2025</time>
 						</div>
 
-						<p>8-Year General Grammar School</p>
+						<p data-i18n="grammarSchoolParagraph">8-Year General Grammar School</p>
 						
 						<div class="education-links">
-							<a class="btn btn-secondary" href="https://www.gtr.cz" target="_blank" rel="noopener noreferrer">Website</a>
+							<a class="btn btn-secondary" href="https://www.gtr.cz" target="_blank" rel="noopener noreferrer" data-i18n="websiteButton">Website</a>
 						</div>
 					</article>
 
 					<acrticle class="education-card">
-						<h3 class="education-title">Palacký University Olomouc</h3>
-						<div class="timeline-date">
+						<h3 class="education-title" data-i18n="UPOLtitle">Palacký University Olomouc</h3>
+						<div class="timeline-date" data-i18n="UPOLtime">
 							<time datetime="2017">2025</time> – Present
 						</div>
 
-						<p>Bachelor's Degree in Geoinformatics and Cartography</p>
+						<p data-i18n="UPOLparagraph">Bachelor's Degree in Geoinformatics and Cartography</p>
 
 						<div class="education-links">
-							<a class="btn btn-primary" href="https://www.geoinformatics.upol.cz/en/" target="_blank" rel="noopener noreferrer">Department</a>
-							<a class="btn btn-secondary" href="https://www.geoinformatics.upol.cz/bachelor-programme/" target="_blank" rel="noopener noreferrer">Curriculum</a>
+							<a class="btn btn-primary" href="https://www.geoinformatics.upol.cz/en/" target="_blank" rel="noopener noreferrer" data-i18n="departmentButton">Department</a>
+							<a class="btn btn-secondary" href="https://www.geoinformatics.upol.cz/bachelor-programme/" target="_blank" rel="noopener noreferrer" data-i18n="curriculumButton">Curriculum</a>
 						</div>
 					</acrticle>
 				</div>
@@ -207,5 +210,7 @@
 			</div>
 			
 		</footer>
+
+		<script src="./scripts/controller.js" type="module"></script>
 	</body>
 </html>
