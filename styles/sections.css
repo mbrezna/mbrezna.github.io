@@ -2,6 +2,7 @@
   color: var(--accent-blue);
   font-size: 1.8rem;
   font-weight: 800;
+  text-align: center;
   margin-bottom: 5px;
 }
 
@@ -44,7 +45,7 @@
 }
 
 .photo-container img {
-  max-width: 350px;
+  max-width: 330px;
   border-radius: 40px;
   object-fit: cover;
 }
@@ -87,7 +88,9 @@
 }
 
 /* ----EXPERIENCE-&-PROJECTS-SECTION------------------------------------ */
-.experience-title {
+.experience-title,
+.projects-title,
+.education-title {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-main);
@@ -150,8 +153,23 @@
   flex-wrap: wrap;
 }
 
-.project-links {
+.project-links,
+.education-links {
   display: flex;
   gap: 15px;
   margin-top: 5px;
+}
+
+/* ----EDUCATION-SECTION------------------------------------ */
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.education-card {
+  background-color: var(--nav-bg);
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
