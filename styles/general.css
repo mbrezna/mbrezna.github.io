@@ -55,7 +55,7 @@ p {
 .btn {
   display: inline-block;
   padding: 8px 16px;
-  border-radius: 5px;
+  border-radius: 25px;
   transition: all 0.2s ease-in-out;
 }
 
