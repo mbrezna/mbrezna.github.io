@@ -1,17 +1,15 @@
-import { translations } from './translations.js';
-
 export const elements = {
   englishButton: document.querySelector('.js-english-btn'),
   czechButton: document.querySelector('.js-czech-btn')
 };
 
-export function applyTranslations(language) {
+export function applyTranslations(translations) {
   const translatableElems = document.querySelectorAll('[data-i18n]');
 
   translatableElems.forEach((element) => {
     const key = element.dataset.i18n;
 
-    if (translations[language][key]) element.innerHTML = translations[language][key];
+    if (translations[key]) element.innerHTML = translations[key];
   });
 }
 

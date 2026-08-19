@@ -1,3 +1,5 @@
+import { translations } from './translations.js';
+
 function setToLocalStorage(key, input) {
   localStorage.setItem(key, JSON.stringify(input));
 }
@@ -14,4 +16,8 @@ export const state = {
 export function updateLanguage(language) {
   state.language = language;
   setToLocalStorage('language', language);
+}
+
+export function getTranslations() {
+  return translations[state.language];
 }
