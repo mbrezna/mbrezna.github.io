@@ -1,6 +1,5 @@
 export const elements = {
-  englishButton: document.querySelector('.js-english-btn'),
-  czechButton: document.querySelector('.js-czech-btn')
+  languageToggleBtns: document.querySelectorAll('.js-language-toggle')
 };
 
 export function applyTranslations(translations) {
@@ -13,8 +12,10 @@ export function applyTranslations(translations) {
   });
 }
 
-export function languageBtnSwitch(button) {
-  elements.englishButton.classList.remove('active-language');
-  elements.czechButton.classList.remove('active-language');
-  button.classList.add('active-language');
+export function languageBtnSwitch(language) {
+  elements.languageToggleBtns.forEach((button) => {
+    button.classList.remove('active-language');
+
+    if (button.dataset.language === language) button.classList.add('active-language');
+  });
 }
