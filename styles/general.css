@@ -13,6 +13,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--bg-color);
@@ -32,7 +37,7 @@ a:hover {
 }
 
 section {
-  padding: 0 100px 80px 5%;
+  padding: 0 5% 60px 5%;
   margin: 0;
 }
 
@@ -44,6 +49,35 @@ p {
   font-size: 1rem;
   color: var(--text-muted);
   margin: 0;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--accent-blue);
+  border: 1px solid var(--accent-blue);
+  color: white;
+}
+
+.btn-primary:hover {
+  color: white;
+  box-shadow: 0 5px 10px rgba(37, 99, 235, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 5px 10px rgba(37, 99, 235, 0.2);
 }
 
 
