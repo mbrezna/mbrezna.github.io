@@ -56,10 +56,6 @@
 
 .nav {
   display: none;
-  /*
-  display: flex;
-  gap: 20px;
-  */
 }
 
 .nav-visible {
@@ -88,12 +84,6 @@
   max-width: 130px;
   background-color: var(--bg-color);
   border-radius: 25px;
-  /*
-  padding: 2px;
-
-  background-color: var(--bg-color);
-  border-radius: 25px;
-  */
 }
 
 .toggle-btn {
@@ -173,3 +163,39 @@
 }
 
 /* ----RESPONSIVITY------------------------------------ */
+@media (min-width: 760px) {
+  .hamburger-button {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    gap: 20px;
+
+    font-weight: 500;
+    font-size: 1rem;
+
+    color: var(--text-muted);
+  }
+
+  .language-toggle {
+    display: inline-block;
+    max-width: 140px;
+    background-color: var(--bg-color);
+    border-radius: 25px;
+  }
+
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 25px;
+  }
+
+  .main-footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+}
+

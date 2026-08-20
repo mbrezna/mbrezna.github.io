@@ -50,12 +50,14 @@ p {
   font-size: 1rem;
   color: var(--text-muted);
   margin: 0;
+  max-width: 60ch;
 }
 
 /* BUTTONS */
 .btn {
   display: inline-block;
   padding: 8px 16px;
+  margin: 3px 0;
   border-radius: 25px;
   transition: all 0.2s ease-in-out;
 }
