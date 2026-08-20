@@ -4,27 +4,30 @@
   top: 20px;
   left: 40px;
   right: 40px;
-
-  background-color: var(--nav-bg);
-  /* glass effects */
-  backdrop-filter: blur(12px); 
-  -webkit-backdrop-filter: blur(12px);
-  
-  padding: 7px 30px;
-  border-radius: 50px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   z-index: 1000;
-  border: 1px solid rgba(255, 255, 255, 0.5);
 
+  /*
   display: flex;
   align-items: center;
   justify-content: space-between;
+  */
+  padding: 7px 30px;
+
+  background-color: var(--nav-bg);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  /* glass effects */
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .main-header nav {
+  /*
   display: flex;
   align-items: center;
   gap: 40px;
+  */
 }
 
 .logo {
@@ -34,28 +37,36 @@
 }
 
 .nav-links {
+  /*
   display: flex;
   gap: 20px;
+  */
+
   font-weight: 500;
   font-size: 1rem;
+
   color: var(--text-muted);
 }
 
 /* ----LANGUAGE-TOGGLE-------------------------------- */
 .language-toggle {
+  padding: 2px;
+
   background-color: var(--bg-color);
   border-radius: 25px;
-  padding: 2px;
 }
 
 .toggle-btn {
-  border: none;
-  cursor: pointer;
-  border-radius: 25px;
   padding: 8px 16px;
-  background-color: var(--bg-color);
+
   font-weight: 500;
   font-size: 0.8rem;
+
+  background-color: var(--bg-color);
+  border: none;
+  border-radius: 25px;
+
+  cursor: pointer;
 }
 
 .toggle-btn:hover {
@@ -69,24 +80,31 @@
 
 /* ----PAGE-FOOTER------------------------------------ */
 .main-footer {
-  padding: 40px 5%;
-  background-color: #ffffff;
+  /*
   display: flex;
   justify-content: space-between;
   align-items: center;
+  */
+
+  padding: 40px 5%;
+  background-color: #ffffff;
   border-top: 1px solid #e2e8f0;
 }
 
 .footer-name {
-  font-weight: 700;
   margin: 0;
+  font-weight: 700;
 }
 
 .footer-links {
+  /*
   display: flex;
   gap: 20px;
+  */
+
   font-size: 0.9rem;
   font-weight: 500;
+  
   color: var(--text-muted);
 }
 
@@ -110,8 +128,3 @@
 }
 
 /* ----RESPONSIVITY------------------------------------ */
-@media (max-width: 800px) {
-  .about {
-    flex-direction: column;
-  }
-}

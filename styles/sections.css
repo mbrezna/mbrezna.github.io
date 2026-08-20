@@ -1,62 +1,68 @@
 .section-title {
-  color: var(--accent-blue);
+  margin-bottom: 5px;
   font-size: 1.8rem;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 5px;
+  color: var(--accent-blue);
 }
 
 /* ----HERO-SECTION------------------------------------ */
 #hero {
-  padding-top: 130px;
+  /*
   display: flex;
   align-items: center;
+  */
+
+  padding-top: 130px;
   box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .hero-texts {
-  flex: 1;
+  /* flex: 1; */
 }
 
 .hero-subtitle {
-  color: var(--text-main);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1.3rem;
+  color: var(--text-main);
 }
 
 .hero-title {
+  margin-bottom: 40px;
   font-size: 2.2rem;
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 40px;
 }
 
 .highlight {
-  color: var(--accent-blue);
   font-style: normal;
+  color: var(--accent-blue);
 }
 
 .photo-container {
+  /*
   width: 35%;
   margin-right: 20px;
+  */
 }
 
 .photo-container img {
   max-width: 330px;
-  border-radius: 40px;
   object-fit: cover;
+  border-radius: 40px;
 }
 
 /* ----ABOUT-SECTION------------------------------------ */
 .about {
-  max-width: 1200px;
-
+  /*
   display: flex;
   align-items: center;
   gap: 25px;
+  */
+  max-width: 1200px;
 }
 
 .about p {
@@ -65,26 +71,28 @@
 }
 
 .motto-container {
-  background-color: var(--nav-bg);
+  height: fit-content;
   padding: 7px 20px;
+  /* flex: 40%; */
+
+  background-color: var(--nav-bg);
   border-radius: 50px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.5);
-
-  height: fit-content;
-  flex: 40%;
 }
 
 .personal-motto {
+  padding-left: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+
   font-size: 1.2rem;
   font-weight: 500;
   font-style: italic;
+  line-height: 1.3;
+
   color: var(--text-main);
   border-left: 4px solid var(--accent-blue);
-  padding-left: 15px;
-  margin-left: 10px;
-  line-height: 1.3;
-  margin-right: 10px
 }
 
 /* ----EXPERIENCE-&-PROJECTS-SECTION------------------------------------ */
@@ -104,8 +112,8 @@
 
 #experience p,
 #projects p {
-  color: var(--text-muted);
   max-width: 700px;
+  color: var(--text-muted);
 }
 
 .timeline {
@@ -114,13 +122,14 @@
 }
 
 .timeline::before {
-  content: "";
-  background-color: var(--accent-blue);
   position: absolute;
   left: 0;
   top: 10px;
   bottom: 29px;
   width: 2px;
+
+  content: "";
+  background-color: var(--accent-blue);
 }
 
 .timeline-item {
@@ -132,44 +141,49 @@
 
 .timeline-item::before {
   content: "";
-
-  width: 15px;
-  height: 15px;
-  background-color: var(--bg-color);
-  border: 2px solid var(--accent-blue);
-  border-radius: 50%;
-
   position: absolute;
   top: 6px;
   left: -33.5px;
+  width: 15px;
+  height: 15px;
+
+  background-color: var(--bg-color);
+  border: 2px solid var(--accent-blue);
+  border-radius: 50%;
 }
 
 .timeline-item header {
+  /*
   display: flex;
   align-items: center;
   align-content: flex-start;
   column-gap: 15px;
   row-gap: 0;
   flex-wrap: wrap;
+  */
 }
 
 .project-links,
 .education-links {
+  /*
   display: flex;
   gap: 15px;
   margin-top: 8px;
+  */
 }
 
 /* ----EDUCATION-SECTION------------------------------------ */
 .education-grid {
+  /*
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  */
 }
 
 .education-card {
-  background-color: var(--nav-bg);
   padding: 30px;
+  background-color: var(--nav-bg);
   border-radius: 30px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
