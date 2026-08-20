@@ -13,10 +13,6 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.hero-texts {
-  /* flex: 1; */
-}
-
 .hero-subtitle {
   margin-left: 10px;
   font-weight: 600;
@@ -155,17 +151,6 @@ just in case project timeline has suddenly a different hight
   border-radius: 50%;
 }
 
-.timeline-item header {
-  /*
-  display: flex;
-  align-items: center;
-  align-content: flex-start;
-  column-gap: 15px;
-  row-gap: 0;
-  flex-wrap: wrap;
-  */
-}
-
 .project-links,
 .education-links {
   margin-top: 8px;
@@ -237,6 +222,15 @@ just in case project timeline has suddenly a different hight
 
   .education-links {
     display: inline-block;
+  }
+
+  .timeline-item header {
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    column-gap: 15px;
+    row-gap: 0;
+    flex-wrap: wrap;
   }
 }
 
