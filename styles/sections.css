@@ -18,14 +18,14 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--text-main);
 }
 
 .hero-title {
   margin-left: 10px;
   margin-bottom: 40px;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 1.1;
 }
@@ -86,6 +86,14 @@
 }
 
 /* ----EXPERIENCE-&-PROJECTS-SECTION------------------------------------ */
+#experience,
+#projects,
+#education {
+  max-width: 1000px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
 .experience-title,
 .projects-title,
 .education-title {
@@ -107,28 +115,9 @@
 }
 
 .timeline {
-  position: relative;
   padding: 0 0 0 25px;
   margin: 0 10px;
 }
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  bottom: 95px;
-  width: 2px;
-
-  background-color: var(--accent-blue);
-}
-
-/*
-just in case project timeline has suddenly a different hight
-.timeline-projects::before {
-  bottom: 95px;
-}
-*/
 
 .timeline-item {
   position: relative;
@@ -149,6 +138,21 @@ just in case project timeline has suddenly a different hight
   background-color: var(--bg-color);
   border: 2px solid var(--accent-blue);
   border-radius: 50%;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 24px;
+  bottom: -35px;
+  width: 2px;
+
+  background-color: var(--accent-blue);
+}
+
+.timeline-item:last-child::after {
+  display: none;
 }
 
 .project-links,
@@ -225,13 +229,13 @@ just in case project timeline has suddenly a different hight
   }
 
   .timeline-item header {
-    display: flex;
-    align-items: center;
-    align-content: flex-start;
-    column-gap: 15px;
-    row-gap: 0;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  column-gap: 15px;
+  row-gap: 0;
+  flex-wrap: wrap;
+}
 }
 
 @media (min-width: 840px) {
