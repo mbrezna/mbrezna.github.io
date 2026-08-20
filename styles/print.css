@@ -1,0 +1,78 @@
+@media print { 
+  @page {
+    size: A4 portrait;
+    margin: 2cm;
+  }
+
+  body {
+    background-color: initial;
+  }
+
+  #about p,
+  #experience p,
+  #projects p,
+  #education p,
+  .timeline-date,
+  .main-footer a {
+    color: black;
+  }
+
+  #about,
+  #experience,
+  #projects,
+  #education {
+    padding-bottom: 0;
+    break-inside: avoid;
+  }
+
+  .main-header nav,
+  .main-header button,
+  .language-toggle,
+  .project-links,
+  .education-links,
+  .timeline-item::after,
+  .timeline-item::before {
+    display: none;
+  }
+
+  .main-header {
+    position: initial;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+
+    box-shadow: none;
+    border: none;
+    background-color: initial;
+  }
+
+  .mobile-menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  #hero {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .photo-container {
+    margin: 0;
+  }
+
+  .photo-container img {
+    width: 160px;
+  }
+
+  .main-footer {
+    margin-top: 15px;
+  }
+}
