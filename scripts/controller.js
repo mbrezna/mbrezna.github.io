@@ -17,6 +17,12 @@ function init() {
   View.elements.hamburgerButton.addEventListener('click', () => {
     View.toggleMobileMenu();
   });
+
+  View.elements.sectionLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      View.toggleMobileMenu();
+    });
+  });
 }
 
 init();

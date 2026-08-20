@@ -1,8 +1,9 @@
 export const elements = {
   languageToggleBtns: document.querySelectorAll('.js-language-toggle'),
   hamburgerButton: document.querySelector('.js-hamburger-button'),
-  languageToggle: document.querySelector('.js-language-toggle-container'),
-  navigation: document.querySelector('.js-nav')
+  languageToggleContainer: document.querySelector('.js-language-toggle-container'),
+  navigation: document.querySelector('.js-nav'),
+  sectionLinks: document.querySelectorAll('.js-section-link')
 };
 
 export function applyTranslations(translations) {
@@ -24,8 +25,6 @@ export function languageBtnSwitch(language) {
 }
 
 export function toggleMobileMenu() {
-  elements.languageToggle.classList.toggle('language-toggle-visible');
+  elements.languageToggleContainer.classList.toggle('language-toggle-visible');
   elements.navigation.classList.toggle('nav-visible');
 }
-
-console.log(elements.languageToggle);
