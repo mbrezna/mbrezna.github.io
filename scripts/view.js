@@ -1,5 +1,8 @@
 export const elements = {
-  languageToggleBtns: document.querySelectorAll('.js-language-toggle')
+  languageToggleBtns: document.querySelectorAll('.js-language-toggle'),
+  hamburgerButton: document.querySelector('.js-hamburger-button'),
+  languageToggle: document.querySelector('.js-language-toggle-container'),
+  navigation: document.querySelector('.js-nav')
 };
 
 export function applyTranslations(translations) {
@@ -19,3 +22,10 @@ export function languageBtnSwitch(language) {
     if (button.dataset.language === language) button.classList.add('active-language');
   });
 }
+
+export function toggleMobileMenu() {
+  elements.languageToggle.classList.toggle('language-toggle-visible');
+  elements.navigation.classList.toggle('nav-visible');
+}
+
+console.log(elements.languageToggle);

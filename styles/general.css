@@ -14,7 +14,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   scroll-padding-top: 130px;
 }
 
@@ -30,6 +30,7 @@ a {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
+  display: inline-block;
 }
 
 a:hover {

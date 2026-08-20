@@ -13,6 +13,10 @@ function init() {
       View.languageBtnSwitch(selectedLanguage);
     });
   });
+
+  View.elements.hamburgerButton.addEventListener('click', () => {
+    View.toggleMobileMenu();
+  });
 }
 
 init();

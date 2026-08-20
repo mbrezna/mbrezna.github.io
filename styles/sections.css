@@ -1,5 +1,5 @@
 .section-title {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: 1.8rem;
   font-weight: 800;
   text-align: center;
@@ -13,7 +13,7 @@
   align-items: center;
   */
 
-  padding-top: 130px;
+  padding-top: 140px;
   box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -23,6 +23,7 @@
 }
 
 .hero-subtitle {
+  margin-left: 10px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -31,6 +32,7 @@
 }
 
 .hero-title {
+  margin-left: 10px;
   margin-bottom: 40px;
   font-size: 2.2rem;
   font-weight: 800;
@@ -43,6 +45,9 @@
 }
 
 .photo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
   /*
   width: 35%;
   margin-right: 20px;
@@ -50,24 +55,25 @@
 }
 
 .photo-container img {
-  max-width: 330px;
+  max-width: 280px;
   object-fit: cover;
   border-radius: 40px;
 }
 
 /* ----ABOUT-SECTION------------------------------------ */
-.about {
+#about {
   /*
   display: flex;
   align-items: center;
   gap: 25px;
-  */
   max-width: 1200px;
+  */
+  margin: 20px 3%;
 }
 
-.about p {
-  max-width: 700px;
-  margin: 25px;
+#about p {
+  /* max-width: 700px; */
+  margin: 20px 0;
 }
 
 .motto-container {
@@ -112,30 +118,39 @@
 
 #experience p,
 #projects p {
-  max-width: 700px;
+  /* max-width: 700px; */
   color: var(--text-muted);
 }
 
 .timeline {
   position: relative;
   padding: 0 0 0 25px;
+  margin: 0 10px;
 }
 
 .timeline::before {
+  content: "";
   position: absolute;
   left: 0;
   top: 10px;
-  bottom: 29px;
+  bottom: 95px;
   width: 2px;
 
-  content: "";
   background-color: var(--accent-blue);
 }
+
+/*
+just in case project timeline has suddenly a different hight
+.timeline-projects::before {
+  bottom: 95px;
+}
+*/
 
 .timeline-item {
   position: relative;
   display: flex;
   flex-direction: column;
+  gap: 5px;
   margin-bottom: 20px;
 }
 
@@ -165,17 +180,18 @@
 
 .project-links,
 .education-links {
-  /*
-  display: flex;
-  gap: 15px;
   margin-top: 8px;
-  */
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
 }
 
 /* ----EDUCATION-SECTION------------------------------------ */
 .education-grid {
-  /*
   display: grid;
+  gap: 15px;
+  /*
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   */

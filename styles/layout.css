@@ -1,46 +1,71 @@
 /* ----PAGE-HEADER------------------------------------ */
 .main-header {
   position: fixed;
-  top: 20px;
-  left: 40px;
-  right: 40px;
+  top: 10px;
+  left: 10px;
+  right: 10px;
   z-index: 1000;
-
-  /*
+  
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  */
-  padding: 7px 30px;
+  gap: 5px;
+  
+  margin: 10px;
+  padding: 15px 35px;
+
+  text-align: center;
 
   background-color: var(--nav-bg);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50px;
+  border-radius: 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   /* glass effects */
   backdrop-filter: blur(12px); 
   -webkit-backdrop-filter: blur(12px);
 }
 
-.main-header nav {
-  /*
+.mobile-menu {
   display: flex;
   align-items: center;
-  gap: 40px;
-  */
+  justify-content: space-between;
 }
 
 .logo {
   font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: -0.5px;
+  font-size: 1.2rem;
+  /* letter-spacing: -0.5px; */
 }
 
-.nav-links {
+.logo a {
+  padding: 10px 0;
+}
+
+.hamburger-button {
+  padding-bottom: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger-icon {
+  width: 1.6rem;
+  fill: var(--accent-blue);
+}
+
+.nav {
+  display: none;
   /*
   display: flex;
   gap: 20px;
   */
+}
+
+.nav-visible {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
 
   font-weight: 500;
   font-size: 1rem;
@@ -48,16 +73,31 @@
   color: var(--text-muted);
 }
 
+.nav-visible a {
+  text-align: left;
+  padding: 10px 0;
+}
+
 /* ----LANGUAGE-TOGGLE-------------------------------- */
 .language-toggle {
+  display: none;
+}
+
+.language-toggle-visible {
+  display: inline-block;
+  max-width: 130px;
+  background-color: var(--bg-color);
+  border-radius: 25px;
+  /*
   padding: 2px;
 
   background-color: var(--bg-color);
   border-radius: 25px;
+  */
 }
 
 .toggle-btn {
-  padding: 8px 16px;
+  padding: 15px 22px;
 
   font-weight: 500;
   font-size: 0.8rem;
@@ -80,11 +120,10 @@
 
 /* ----PAGE-FOOTER------------------------------------ */
 .main-footer {
-  /*
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  */
+  row-gap: 5px;
 
   padding: 40px 5%;
   background-color: #ffffff;
@@ -97,15 +136,20 @@
 }
 
 .footer-links {
-  /*
   display: flex;
-  gap: 20px;
-  */
+  gap: 15px;
 
   font-size: 0.9rem;
   font-weight: 500;
-  
+
   color: var(--text-muted);
+}
+
+.contact-links-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
 }
 
 .contact-icon {
@@ -123,8 +167,9 @@
 
 .contact-link a {
   display: flex;
-  justify-content: center;
+  gap: 5px;
   align-items: center;
+  padding: 3px;
 }
 
 /* ----RESPONSIVITY------------------------------------ */
