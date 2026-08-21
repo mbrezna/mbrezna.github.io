@@ -15,6 +15,7 @@ export const translations = {
     aboutSecondParagraph: 'During my studies, I am building a strong foundation in spatial data analysis, GIS and map making. However, because connecting these disciplines with IT is my biggest passion, I spend my free time studying front-end development (HTML, CSS and JavaScript). My next goals are to learn the React framework and dive into back-end development using Python and database systems (SQL/MySQL).',
     aboutThirdParagraph: 'Currently, I am searching for an internship or a part-time job where I can put my knowledge into practice. I look forward to helping with real projects and gaining new experience.',
     personalMotto: '"Anything is within reach, as long as your drive is strong enough."',
+    downloadCV: 'Download CV',
 
     // experience section
     crossCountryTitle: 'International level Cross-Country Skier',
@@ -47,7 +48,7 @@ export const translations = {
     grammarSchoolParagraph: '8-Year General Grammar School',
     UPOLtitle: 'Palacký University Olomouc',
     UPOLtime: `<time datetime="2025">2025</time> – Present`,
-    UPOLparagraph: `Bachelor's Degree in Geoinformatics and Cartography`,
+    UPOLparagraph: `Bachelor's Degree program Geoinformatics and Cartography`,
   },
 
   cs: {
@@ -69,6 +70,7 @@ export const translations = {
     aboutThirdParagraph: 'Aktuálně hledám příležitosti pro studentské stáže nebo zkrácené úvazky, kde bych mohl své dosavadní znalosti uvést do praxe. Těším se na možnost pomáhat s reálnými projekty a nabrat nové zkušenosti.',
 
     personalMotto: '"Vše je možné, pokud je vaše ‚chci‘ dostatečně silné."',
+    downloadCV: 'Stáhnout životopis',
 
     // experience section
     crossCountryTitle: 'Běžec na lyžích na mezinárodní úrovni',

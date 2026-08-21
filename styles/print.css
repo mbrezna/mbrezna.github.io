@@ -1,11 +1,12 @@
 @media print { 
   @page {
     size: A4 portrait;
-    margin: 2cm;
+    margin: 1cm;
   }
 
   body {
     background-color: initial;
+
   }
 
   #about p,
@@ -20,13 +21,20 @@
   #about,
   #experience,
   #projects,
-  #education {
-    padding-bottom: 0;
+  #education,
+  .main-footer {
+    padding: 25px 45px;
+    margin: 0;
     break-inside: avoid;
+  }
+
+  #about {
+    flex-direction: column;
   }
 
   .main-header nav,
   .main-header button,
+  .main-footer .print-button,
   .language-toggle,
   .project-links,
   .education-links,
@@ -38,7 +46,6 @@
   .main-header {
     position: initial;
     justify-content: center;
-    margin-top: 20px;
     padding: 0;
 
     box-shadow: none;
@@ -74,5 +81,12 @@
 
   .main-footer {
     margin-top: 15px;
+  }
+
+  #about p,
+  .timeline-item,
+  .education-card,
+  .main-footer {
+    break-inside: avoid;
   }
 }
