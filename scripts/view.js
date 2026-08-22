@@ -16,6 +16,7 @@ export function applyTranslations(translations) {
   });
 
   document.documentElement.lang = translations.langAttribute;
+  document.querySelector('[data-i18n-meta]').content = translations.metaDescription;
 }
 
 export function languageBtnSwitch(language) {

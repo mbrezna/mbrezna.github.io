@@ -1,6 +1,7 @@
 export const translations = {
   en: {
     langAttribute: 'en',
+    metaDescription: 'Personal portfolio. Geoinformatics and Cartography student focusing on front-end web development.',
 
     //header + section titles
     experienceSection: 'Experience',
@@ -55,6 +56,7 @@ export const translations = {
 
   cs: {
     langAttribute: 'cs',
+    metaDescription: 'Osobní portfolio. Student geoinformatiky a kartografie se zaměřením na front-end webové technologie.',
 
     //header + section titles
     experienceSection: 'Zkušenosti',
