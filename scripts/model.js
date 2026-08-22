@@ -10,7 +10,7 @@ function getFromLocalStorage(key, defaultValue) {
 }
 
 export const state = {
-  language: getFromLocalStorage('language', 'en')
+  language: getFromLocalStorage('language', detectLanguage())
 };
 
 export function updateLanguage(language) {
@@ -20,4 +20,10 @@ export function updateLanguage(language) {
 
 export function getTranslations() {
   return translations[state.language];
+}
+
+function detectLanguage() {
+  const detectedLanguage = navigator.language.slice(0, 2);
+  if (detectedLanguage === 'cs') return detectedLanguage;
+  else return 'en'
 }
