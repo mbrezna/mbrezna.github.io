@@ -149,7 +149,6 @@
   top: 24px;
   bottom: -35px;
   width: 2px;
-
   background-color: var(--accent-blue);
 }
 
@@ -166,6 +165,9 @@
   column-gap: 10px;
 }
 
+.skill {
+  font-weight: 600;
+}
 /* ----EDUCATION-SECTION------------------------------------ */
 .education-grid {
   display: grid;

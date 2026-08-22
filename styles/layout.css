@@ -81,7 +81,7 @@
 
 .language-toggle-visible {
   display: inline-block;
-  max-width: 130px;
+  width: fit-content;
   background-color: var(--bg-color);
   border-radius: 25px;
 }
