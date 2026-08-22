@@ -12,7 +12,7 @@ export const translations = {
 
     // about section
     aboutFirstParagraph: 'I am a student of geoinformatics at Palacký University Olomouc, Czechia. For years, I was a competitive cross-country skier with great enthusiasm, but as soon as I started university, my studies took my full attention. The discipline and determination I built during my years in elite sports are qualities I now apply to my studies of geoinformatics and web technologies.',
-    aboutSecondParagraph: 'During my studies, I am building a strong foundation in <strong class="skill">spatial data analysis, GIS and map making<strong>. However, because connecting these disciplines with IT is my biggest passion, I spend my free time studying front-end development (HTML, CSS and JavaScript). My next goals are to learn the React framework and dive into back-end development using Python and database systems (SQL).',
+    aboutSecondParagraph: 'During my studies, I am building a strong foundation in <strong class="skill">spatial data analysis, GIS and map making</strong>. However, because connecting these disciplines with IT is my biggest passion, I spend my free time studying front-end development (HTML, CSS and JavaScript). My next goals are to learn the React framework and dive into back-end development using Python and database systems (SQL).',
     aboutThirdParagraph: 'Currently, I am searching for an internship or a part-time job where I can put my knowledge into practice. I look forward to helping with real projects and gaining new experience.',
     personalMotto: 'Personal motto: "Anything is within reach, as long as your drive is strong enough."',
     downloadCV: 'Download CV',
@@ -33,7 +33,7 @@ export const translations = {
     travelCalculatorParagraph: 'A web application built to calculate and share travel expenses. It supports multiple languages and enables unit conversion, saving trip history, and generating QR codes for easy cost splitting. This project, focused on <strong class="skill">JavaScript programming</strong>, helped me gain an understanding of DOM manipulation, event handling, and modules. To ensure clean code organization, I implemented the MVC (Model-View-Controller) architecture.',
     personalWebTitle: 'Personal web',
     personalWebTime: 'August 2026',
-    personalWebParagraph: 'My personal interactive portfolio developed in HTML, CSS, and JavaScript. It features a minimalist responsive design, optimized for both mobile and desktop devices using a mobile-first approach. The core functionality is multi-language support.',
+    personalWebParagraph: 'My personal interactive portfolio developed in <strong class="skill">HTML, CSS, and JavaScript</strong>. It features a minimalist <strong class="skill">responsive design</strong>, optimized for both mobile and desktop devices using a mobile-first approach. The core functionality is multi-language support.',
 
     // buttons
     liveDemoButton: 'Live demo',
