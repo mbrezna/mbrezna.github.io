@@ -14,6 +14,8 @@ export function applyTranslations(translations) {
 
     if (translations[key]) element.innerHTML = translations[key];
   });
+
+  document.documentElement.lang = translations.langAttribute;
 }
 
 export function languageBtnSwitch(language) {

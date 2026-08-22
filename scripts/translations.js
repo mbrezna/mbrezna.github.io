@@ -1,5 +1,7 @@
 export const translations = {
   en: {
+    langAttribute: 'en',
+
     //header + section titles
     experienceSection: 'Experience',
     projectsSection: 'Projects',
@@ -52,6 +54,8 @@ export const translations = {
   },
 
   cs: {
+    langAttribute: 'cs',
+
     //header + section titles
     experienceSection: 'Zkušenosti',
     projectsSection: 'Projekty',
