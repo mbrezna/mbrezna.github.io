@@ -1,12 +1,19 @@
 @media print { 
   @page {
     size: A4 portrait;
-    margin: 1cm;
+    margin: 1.5cm 1cm;
   }
 
   body {
     background-color: initial;
+  }
 
+  body section {
+    padding-bottom: 10px;
+  }
+
+  #hero {
+    min-height: auto;
   }
 
   #about p,
@@ -19,11 +26,9 @@
   }
 
   #about,
-  #experience,
-  #projects,
   #education,
   .main-footer {
-    padding: 25px 45px;
+
     margin: 0;
     break-inside: avoid;
   }
@@ -69,6 +74,15 @@
 
   .hero-subtitle {
     font-size: 1rem;
+  }
+
+  .section-title,
+  .hero-title, 
+  .hero-subtitle {
+    color: black;
+    background-image: none;
+    -webkit-background-clip: none;
+    background-clip: none;
   }
   
   .photo-container {
