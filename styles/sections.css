@@ -3,11 +3,11 @@
   font-size: 1.8rem;
   font-weight: 800;
   text-align: center;
-  color: var(--accent-gradient);
 }
 
 .section-title,
-.highlight {
+.hero-title, 
+.hero-subtitle {
   color: transparent;
   background-image: var(--accent-gradient);
   -webkit-background-clip: text;
@@ -16,9 +16,12 @@
 
 /* ----HERO-SECTION------------------------------------ */
 #hero {
+  position: relative;
+  z-index: 1; 
   padding-top: 140px;
-  box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  min-height: 100dvh;
+  /* box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.1); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
 }
 
 .hero-subtitle {
@@ -58,7 +61,7 @@
 
 /* ----ABOUT-SECTION------------------------------------ */
 #about {
-  margin: 20px 3%;
+  margin: 0 3%;
 }
 
 #about p {

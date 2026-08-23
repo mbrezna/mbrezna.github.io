@@ -22,11 +22,12 @@ html {
 }
 
 body {
+  margin: 0;
+  overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
   background-color: var(--bg-color);
   color: var(--text-main);
-  margin: 0;
-  line-height: 1.6;
 }
 
 a {
@@ -54,6 +55,12 @@ p {
   color: var(--text-muted);
   margin: 0;
   max-width: 60ch;
+}
+
+abbr {
+  text-decoration: none;
+  border-bottom: 0.8px solid var(--text-muted);
+  cursor: help;
 }
 
 /* BUTTONS */
