@@ -3,7 +3,15 @@
   font-size: 1.8rem;
   font-weight: 800;
   text-align: center;
-  color: var(--accent-blue);
+  color: var(--accent-gradient);
+}
+
+.section-title,
+.highlight {
+  color: transparent;
+  background-image: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text; /* twice the same property for browser compatibility */
 }
 
 /* ----HERO-SECTION------------------------------------ */
@@ -34,17 +42,12 @@
 
 .highlight {
   font-style: normal;
-  color: var(--accent-blue);
 }
 
 .photo-container {
   display: flex;
   justify-content: center;
   margin-top: 30px;
-  /*
-  width: 35%;
-  margin-right: 20px;
-  */
 }
 
 .photo-container img {
@@ -84,7 +87,7 @@
   line-height: 1.3;
 
   color: var(--text-main);
-  border-left: 4px solid var(--accent-blue);
+  border-left: 4px solid var(--accent-blue-light);
 }
 
 /* ----EXPERIENCE-&-PROJECTS-SECTION------------------------------------ */
@@ -112,7 +115,6 @@
 
 #experience p,
 #projects p {
-  /* max-width: 700px; */
   color: var(--text-muted);
 }
 

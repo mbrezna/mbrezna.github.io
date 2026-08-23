@@ -105,7 +105,7 @@
 }
 
 .active-language {
-  background-color: var(--accent-blue);
+  background-image: var(--accent-gradient);
   color: white;
 }
 
