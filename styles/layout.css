@@ -97,7 +97,7 @@
 }
 
 .toggle-btn {
-  padding: 15px 22px;
+  padding: 15px 20px;
 
   font-weight: 500;
   font-size: 1rem;
@@ -134,14 +134,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 9px 17px 9px 17px;
+  padding: 9px 15px 9px 15px;
   margin: 3px 0;
 
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 
-  background-color: rgba(16, 26, 52, 0.702);
+  background-color: rgba(16, 26, 52, 0.7);
   border: none;
   border-radius: 25px;
 
@@ -175,7 +175,7 @@
 }
 
 .dark-mode .display-mode-btn {
-  background-color: rgba(248, 250, 252, 0.95);
+  background-color: rgba(248, 250, 252, 0.8);
 }
 
 /* ----PAGE-FOOTER------------------------------------ */
