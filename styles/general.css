@@ -46,12 +46,13 @@ body {
   line-height: 1.6;
   background-color: var(--bg-color);
   color: var(--text-main);
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
   display: inline-block;
 }
 
@@ -73,6 +74,7 @@ p {
   color: var(--text-muted);
   margin: 0;
   max-width: 60ch;
+  transition: color 0.5s ease;
 }
 
 abbr {
@@ -98,6 +100,7 @@ abbr {
   background-image: var(--accent-gradient);
   border: none;
   color: white;
+  transition: background-image 0.5s ease;
 }
 
 .btn-primary:hover {
@@ -110,6 +113,7 @@ abbr {
   background-color: transparent;
   border: 1px solid var(--accent-blue);
   color: var(--accent-blue);
+  transition: color 0.5s ease, border-color 0.5s ease;
 }
 
 .btn-secondary:hover {
