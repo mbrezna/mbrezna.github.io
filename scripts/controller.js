@@ -4,6 +4,7 @@ import * as View from './view.js';
 function init() {
   View.applyTranslations(Model.getTranslations());
   View.languageBtnSwitch(Model.state.language);
+  View.applyDisplayModePreference(Model.state.displayMode);
 
   View.elements.languageToggleBtns.forEach((button) => {
     button.addEventListener('click', () => {
@@ -22,6 +23,11 @@ function init() {
     link.addEventListener('click', () => {
       View.toggleMobileMenu();
     });
+  });
+
+  View.elements.displayModeBtn.addEventListener('click', () => {
+    View.displayModeSwitch();
+    Model.updateDisplayMode(Model.state.displayMode);
   });
 }
 

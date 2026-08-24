@@ -10,7 +10,8 @@ function getFromLocalStorage(key, defaultValue) {
 }
 
 export const state = {
-  language: getFromLocalStorage('language', detectLanguage())
+  language: getFromLocalStorage('language', detectLanguage()),
+  displayMode: getFromLocalStorage('displayPrefference', 'light')
 };
 
 export function updateLanguage(language) {
@@ -26,4 +27,13 @@ function detectLanguage() {
   const detectedLanguage = navigator.language.slice(0, 2);
   if (detectedLanguage === 'cs') return detectedLanguage;
   else return 'en'
+}
+
+export function updateDisplayMode(displayModeStatus) {
+  let newStatus;
+  if (displayModeStatus === 'light') newStatus = 'dark';
+  else newStatus = 'light';
+  
+  state.displayMode = newStatus;
+  setToLocalStorage('displayPrefference', newStatus);
 }

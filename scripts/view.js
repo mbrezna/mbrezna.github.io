@@ -2,6 +2,8 @@ export const elements = {
   languageToggleBtns: document.querySelectorAll('.js-language-toggle'),
   hamburgerButton: document.querySelector('.js-hamburger-button'),
   languageToggleContainer: document.querySelector('.js-language-toggle-container'),
+  displayModeContainer: document.querySelector('.js-display-mode-container'),
+  displayModeBtn: document.querySelector('.js-display-mode-btn'),
   navigation: document.querySelector('.js-nav'),
   sectionLinks: document.querySelectorAll('.js-section-link')
 };
@@ -27,7 +29,17 @@ export function languageBtnSwitch(language) {
   });
 }
 
+export function displayModeSwitch() {
+  document.body.classList.toggle('dark-mode');
+}
+
+export function applyDisplayModePreference(preference) {
+  if (preference === 'dark') document.body.classList.add('dark-mode');
+  else document.body.classList.remove('dark-mode');
+}
+
 export function toggleMobileMenu() {
   elements.languageToggleContainer.classList.toggle('language-toggle-visible');
   elements.navigation.classList.toggle('nav-visible');
+  elements.displayModeContainer.classList.toggle('display-mode-toggle-visible');
 }
