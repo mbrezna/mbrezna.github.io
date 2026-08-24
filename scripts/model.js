@@ -11,7 +11,7 @@ function getFromLocalStorage(key, defaultValue) {
 
 export const state = {
   language: getFromLocalStorage('language', detectLanguage()),
-  displayMode: getFromLocalStorage('displayPrefference', 'light')
+  displayMode: getFromLocalStorage('displayPrefference', detectDisplayModePreference())
 };
 
 export function updateLanguage(language) {
@@ -33,7 +33,17 @@ export function updateDisplayMode(displayModeStatus) {
   let newStatus;
   if (displayModeStatus === 'light') newStatus = 'dark';
   else newStatus = 'light';
-  
+
   state.displayMode = newStatus;
   setToLocalStorage('displayPrefference', newStatus);
+}
+
+function detectDisplayModePreference() {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  if (prefersDark === true) {
+    return 'dark';
+  } else {
+    return 'light';
+  }
 }
