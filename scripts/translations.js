@@ -1,7 +1,7 @@
 export const translations = {
   en: {
     langAttribute: 'en',
-    metaDescription: 'Personal portfolio. Geoinformatics and Cartography student focusing on front-end web development.',
+    metaDescription: 'Personal portfolio of a Geoinformatics & Cartography student at UPOL. Self-taught in front-end development (HTML, CSS, JS) and GIS spatial data analysis. Open to internships.',
 
     //header + section titles
     experienceSection: 'Experience',
@@ -58,7 +58,7 @@ export const translations = {
 
   cs: {
     langAttribute: 'cs',
-    metaDescription: 'Osobní portfolio. Student geoinformatiky a kartografie se zaměřením na front-end webové technologie.',
+    metaDescription: 'Osobní portfolio studenta geoinformatiky a kartografie na UPOL. Věnuji se samostudiu front-endového vývoje (HTML, CSS, JS) a analýzy prostorových dat v GIS. Hledám příležitosti pro stáže.',
 
     //header + section titles
     experienceSection: 'Zkušenosti',
