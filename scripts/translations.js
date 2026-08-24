@@ -45,6 +45,7 @@ export const translations = {
     websiteButton: 'Website',
     departmentButton: 'Department',
     curriculumButton: 'Curriculum',
+    downloadPDFbutton: 'Open PDF',
 
     // education section
     grammarSchoolTitle: 'Grammar school Třebíč',
@@ -104,6 +105,7 @@ export const translations = {
     websiteButton: 'Web',
     departmentButton: 'Katedra',
     curriculumButton: 'Studijní plán',
+    downloadPDFbutton: 'Otevřít PDF',
 
     // education section
     grammarSchoolTitle: 'Gymnázium Třebíč',
