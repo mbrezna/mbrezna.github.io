@@ -10,11 +10,17 @@ export const elements = {
 
 export function applyTranslations(translations) {
   const translatableElems = document.querySelectorAll('[data-i18n]');
+  const ariaElements = document.querySelectorAll('[data-i18n-aria]');
 
   translatableElems.forEach((element) => {
     const key = element.dataset.i18n;
 
     if (translations[key]) element.innerHTML = translations[key];
+  });
+
+  ariaElements.forEach((element) => {
+    const key = element.dataset.i18nAria;
+    if (translations[key]) element.setAttribute('aria-label', translations[key]);
   });
 
   document.documentElement.lang = translations.langAttribute;

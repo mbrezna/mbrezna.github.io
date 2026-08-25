@@ -54,7 +54,8 @@
 }
 
 .photo-container img {
-  max-width: 220px;
+  width: 220px;
+  height: 280px;
   object-fit: cover;
   border-radius: 40px;
 }
@@ -218,7 +219,8 @@
   }
 
   .photo-container img {
-    max-width: 240px;
+    width: 240px;
+    height: 310px;
   }
 
   .education-card {
@@ -262,7 +264,8 @@
   }
 
   .photo-container img {
-    max-width: 280px;
+    width: 280px;
+    height: 360px;
   }
 }
 

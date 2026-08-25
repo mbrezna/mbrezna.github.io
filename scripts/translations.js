@@ -54,6 +54,12 @@ export const translations = {
     UPOLtitle: 'Palacký University Olomouc',
     UPOLtime: `<time datetime="2025">2025</time> – Present`,
     UPOLparagraph: `Bachelor's Degree program Geoinformatics and Cartography`,
+
+    // aria labels
+    hamburgerButtonAria: 'Open menu',
+    displayModeToggleAria: 'Toggle display mode (light/dark)',
+    linkedInLink: 'LinkedIn account link',
+    githubLink: 'Github account link'
   },
 
   cs: {
@@ -113,5 +119,11 @@ export const translations = {
     UPOLtitle: 'Univerzita Palackého v Olomouci',
     UPOLtime: `<time datetime="2025">2025</time> – dosud`,
     UPOLparagraph: `Bakalářský obor Geoinformatika a kartografie`,
+
+    // aria labels
+    hamburgerButtonAria: 'Otevřít rozevírací menu',
+    displayModeToggleAria: 'Přepnout režim zobrazení (světlý/tmavý)',
+    linkedInLink: 'Odkaz na LinkedIn účet',
+    githubLink: 'Odkaz na Github účet'
   }
 }
