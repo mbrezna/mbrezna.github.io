@@ -181,6 +181,63 @@
 .skill {
   font-weight: 600;
 }
+
+/* ----VALUE-CIRCLES---------------------------------------- */
+.page-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.page-statistics-header {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 35ch;
+}
+
+.page-statistics-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: fit-content;
+}
+
+.page-statistic {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  background-color: var(--nav-bg);
+  border-radius: 30px;
+  box-shadow: 0 4px 20px var(--shadow-sm);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.page-statistic p {
+  margin: auto 0;
+  max-width: 80px;
+  font-size: 0.80rem;
+  text-align: center;
+  line-height: normal;
+}
+
+.value-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid rgb(43, 198, 43);
+  background-color: var(--bg-color);
+  box-shadow: 0 0 10px 1px rgba(16, 177, 16, 0.3), inset 0 0 10px 3px rgba(16, 214, 16, 0.3);
+  transition: background-color 0.5s ease;
+}
+
 /* ----EDUCATION-SECTION------------------------------------ */
 .education-grid {
   display: grid;
@@ -199,6 +256,16 @@
 @media (min-width: 500px) {
   #hero {
     padding-top: 120px;
+  }
+}
+
+@media (min-width: 580px) {
+  .page-statistics-summary {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .page-statistics-header {
+    max-width: 60ch;
   }
 }
 
@@ -266,6 +333,10 @@
   .photo-container img {
     width: 280px;
     height: 360px;
+  }
+
+  .page-statistic {
+    padding: 30px;
   }
 }
 

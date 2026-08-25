@@ -78,6 +78,10 @@ abbr {
   cursor: help;
 }
 
+figure {
+  margin: 0;
+}
+
 /* BUTTONS */
 .btn {
   display: inline-block;
