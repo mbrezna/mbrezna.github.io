@@ -236,6 +236,13 @@
 }
 
 /* ----RESPONSIVITY------------------------------------ */
+@media (min-width: 500px) {
+  .nav-visible {
+    display: flex;
+    gap: 20px;
+  }
+}
+
 @media (min-width: 730px) {
   .main-footer {
     flex-direction: row;
