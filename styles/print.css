@@ -1,4 +1,19 @@
 @media print { 
+  .dark-mode {
+    --bg-color: #f8fafc;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --accent-blue: #2563eb;
+    --accent-blue-light: #60a5fa;
+    --accent-gradient: linear-gradient(to left, var(--accent-blue-light), var(--accent-blue));
+
+    --nav-bg: rgba(255, 255, 255, 0.702);
+    --border-grey: #e2e8f0;
+    --shadow-sm: #0000000d;
+    --shadow-hover: rgba(37, 99, 235, 0.302);
+  }
+  
+
   @page {
     size: A4 portrait;
     margin: 1.5cm 1cm;
@@ -103,4 +118,9 @@
   .main-footer {
     break-inside: avoid;
   }
+
+  .page-info {
+    display: none;
+  }
+
 }
