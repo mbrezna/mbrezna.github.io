@@ -1,3 +1,4 @@
+/* ----UNIVERSAL-SECTION-STYLES------------------------- */
 .section-title {
   margin-bottom: 10px;
   font-size: 1.8rem;
@@ -51,12 +52,14 @@
   display: flex;
   justify-content: center;
   margin: 30px 15px 0 15px;
+  border-radius: 40px;
 }
 
-.photo-container img {
+.hero-photo {
   width: 220px;
   height: 280px;
   object-fit: cover;
+  overflow: hidden;
   border-radius: 40px;
 }
 
@@ -65,7 +68,7 @@
   margin: 0 3%;
 }
 
-#about p {
+.about-paragraph {
   margin: 20px 0;
 }
 
@@ -117,12 +120,6 @@
 .timeline-date {
   font-size: 1.05rem;
   font-weight: 400;
-  color: var(--text-muted);
-  transition: color 0.5s ease;
-}
-
-#experience p,
-#projects p {
   color: var(--text-muted);
   transition: color 0.5s ease;
 }
@@ -217,7 +214,7 @@
   transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
-.page-statistic p {
+.page-statistic-name {
   margin: auto 0;
   max-width: 80px;
   font-size: 0.80rem;
@@ -285,7 +282,7 @@
     font-size: 1.2rem;
   }
 
-  .photo-container img {
+  .hero-photo {
     width: 240px;
     height: 310px;
   }
@@ -321,7 +318,7 @@
     display: inline-block;
   }
 
-  .timeline-item header {
+  .timeline-item-header {
     display: flex;
     align-items: center;
     align-content: flex-start;
@@ -330,7 +327,7 @@
     flex-wrap: wrap;
   }
 
-  .photo-container img {
+  .hero-photo {
     width: 280px;
     height: 360px;
   }

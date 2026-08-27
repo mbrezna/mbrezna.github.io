@@ -71,7 +71,7 @@
   transition: color 0.5s ease;
 }
 
-.nav-visible a {
+.nav-visible .nav-link {
   text-align: left;
   padding: 10px 0;
 }

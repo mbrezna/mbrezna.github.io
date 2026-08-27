@@ -20,30 +20,27 @@
   }
 
   body {
+    color: black;
     background-color: initial;
   }
 
-  body section {
-    padding-bottom: 10px;
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 10px 0;
   }
 
   #hero {
+    flex-direction: row;
     min-height: auto;
-  }
-
-  #about p,
-  #experience p,
-  #projects p,
-  #education p,
-  .timeline-date,
-  .main-footer a {
-    color: black;
+    box-shadow: none;
+    padding: 0 0 10px 0;
   }
 
   #about,
   #education,
   .main-footer {
-
     margin: 0;
     break-inside: avoid;
   }
@@ -52,60 +49,58 @@
     flex-direction: column;
   }
 
-  .main-header nav,
-  .main-header button,
-  .main-footer .print-button,
+  .nav,
+  .hamburger-button,
   .language-toggle,
+  .display-mode-toggle,
   .project-links,
   .education-links,
   .timeline-item::after,
-  .timeline-item::before {
+  .timeline-item::before,
+  .print-button {
     display: none;
   }
 
   .main-header {
-    position: initial;
-    justify-content: center;
-    padding: 0;
-
-    box-shadow: none;
-    border: none;
-    background-color: initial;
+    all: unset;
+    display: block;
+    text-align: center;
   }
 
   .mobile-menu {
-    display: flex;
-    justify-content: center;
+    display: block;
   }
 
-  #hero {
-    box-shadow: none;
-    padding: 0;
+  .about-main {
+    margin-top: 15x;
   }
 
   .hero-title {
     font-size: 1.6rem;
+    color: black;
   }
 
   .hero-subtitle {
     font-size: 1rem;
   }
 
-  .section-title,
-  .hero-title, 
-  .hero-subtitle {
+  .section-title {
+    all: unset;
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1rem;
     color: black;
-    background-image: none;
-    -webkit-background-clip: none;
-    background-clip: none;
   }
   
   .photo-container {
     margin: 0;
   }
 
-  .photo-container img {
-    width: 160px;
+  .hero-photo {
+    width: 150px;
+    height: auto;
   }
 
   .main-footer {
@@ -123,4 +118,8 @@
     display: none;
   }
 
+  .timeline {
+    margin: 0;
+    padding: 0;
+  }
 }

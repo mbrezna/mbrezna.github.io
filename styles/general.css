@@ -13,7 +13,7 @@
 }
 
 .dark-mode {
-  --bg-color: rgb(2, 11, 34);
+  --bg-color: #020b22;
   --text-main: #f8fafc;
   --text-muted: #a0adc0;
   --accent-blue: #3b82f6;
@@ -74,12 +74,8 @@ p {
 
 abbr {
   text-decoration: none;
-  border-bottom: 0.8px solid var(--text-muted);
+  border-bottom: 1px solid var(--text-muted);
   cursor: help;
-}
-
-figure {
-  margin: 0;
 }
 
 /* BUTTONS */

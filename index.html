@@ -53,10 +53,10 @@
 			</div>
 
 			<nav class="nav js-nav">
-				<a href="#experience" class="js-section-link" data-i18n="experienceSection">Experience</a>
-				<a href="#projects" class="js-section-link" data-i18n="projectsSection">Projects</a>
-				<a href="#education" class="js-section-link" data-i18n="educationSection">Education</a>
-				<a href="#contact" class="js-section-link" data-i18n="contactLink">Contact</a>
+				<a class="nav-link" href="#experience" class="js-section-link" data-i18n="experienceSection">Experience</a>
+				<a class="nav-link" href="#projects" class="js-section-link" data-i18n="projectsSection">Projects</a>
+				<a class="nav-link" href="#education" class="js-section-link" data-i18n="educationSection">Education</a>
+				<a class="nav-link" href="#contact" class="js-section-link" data-i18n="contactLink">Contact</a>
 			</nav>
 
 			<div class="controlls">
@@ -95,7 +95,7 @@
 				</div>
 
 				<div class="photo-container">
-					<img src="./images/hero-photo-300.webp" alt="author photo" srcset="./images/hero-photo-300.webp 300w, 
+					<img class="hero-photo" src="./images/hero-photo-300.webp" alt="author photo" srcset="./images/hero-photo-300.webp 300w, 
 									./images/hero-photo-400.webp 400w" 
 					sizes="(max-width: 630px) 400px, 300px"
 					fetchpriority="high">
@@ -103,18 +103,18 @@
 			</section>
 
 			<section id="about">
-				<div>
+				<div class="about-main">
 					<h2 class="section-title" data-i18n="aboutTitle">About me</h2>
 					
-					<p data-i18n="aboutFirstParagraph">
+					<p class="about-paragraph" data-i18n="aboutFirstParagraph">
 						I am a student of geoinformatics at Palacký University Olomouc, Czechia. For years, I was a competitive cross-country skier with great enthusiasm, but as soon as I started university, my studies took my full attention. The discipline and determination I built during my years in elite sports are qualities I now apply to my studies of geoinformatics and web technologies.
 					</p>
 
-					<p data-i18n="aboutSecondParagraph">
+					<p class="about-paragraph" data-i18n="aboutSecondParagraph">
 						During my studies, I am building a strong foundation in <strong class="skill">spatial data analysis, <abbr title="Geographic Information System">GIS</abbr> and map making</strong>. However, because connecting these disciplines with <abbr title="Information Technology">IT</abbr> is my biggest passion, I spend my free time studying front-end development (<abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> and JavaScript). My next goals are to learn the React framework and dive into back-end development using Python and database systems (<abbr title="Structured Query Language">SQL</abbr>).
 					</p>
 
-					<p data-i18n="aboutThirdParagraph">
+					<p class="about-paragraph" data-i18n="aboutThirdParagraph">
 						Currently, I am searching for an internship or a part-time job where I can put my knowledge into practice. I look forward to helping with real projects and gaining new experience.
 					</p>
 				</div>
@@ -131,27 +131,27 @@
 
 				<div class="timeline">
 					<article class="timeline-item">
-						<header>
+						<header class="timeline-item-header">
 							<h3 class="experience-title" data-i18n="crossCountryTitle">International level Cross-Country Skier</h3>
 							<div class="timeline-date">
 								<time datetime="2020">2020</time> – <time datetime="2026">2026</time>
 							</div>
 						</header>
 						
-						<p data-i18n="crossCountryParagraph">
+						<p class="experience-paragraph" data-i18n="crossCountryParagraph">
 							Years of long-term athletic preparation built my <strong class="skill">goal-oriented mindset</strong>. Strong <strong class="skill">time management</strong> skills allowed me to balance a demanding daily training schedule with academic studies.
 						</p>
 					</article>
 
 					<article class="timeline-item">
-						<header>
+						<header class="timeline-item-header">
 							<h3 class="experience-title" data-i18n="questionaryTitle">Field Data Collector</h3>
 							<div class="timeline-date">
 								<time datetime="2025-10" data-i18n="questionaryTime">October 2025</time>
 							</div>
 						</header>
 
-						<p data-i18n="questionaryParagraph">
+						<p class="experience-paragraph" data-i18n="questionaryParagraph">
 							Direct public communication and data collection for the City of Olomouc traffic survey, as part of the Sustainable Urban Mobility Plan (<abbr title="Plán udržitelné městské mobility Olomouc">PUMMO</abbr>). The main responsibility was to approach citizens in selected city districts and conduct structured questionnaire surveys regarding traffic conditions and parking capacities. Successfully connecting with people on the spot demanded high <strong class="skill">communicativeness and proactivity</strong>.
 						</p>
 					</article>
@@ -163,14 +163,14 @@
 				
 				<div class="timeline timeline-projects">
 					<article class="timeline-item">
-						<header>
+						<header class="timeline-item-header">
 							<h3 class="projects-title" data-i18n="semestralMapTitle">Crisis and health infrastructure in Norway and Sweden</h3>
 							<div class="timeline-date">
 								<time datetime="2026-05" data-i18n="semestralMapTime">May 2026</time>
 							</div>
 						</header>
 						
-						<p data-i18n="semestralMapParagraph">
+						<p class="projects-paragraph" data-i18n="semestralMapParagraph">
 							<strong class="skill">Cartographic project</strong> developed within the Digital Cartography course, resulting in a large-format (A2) desk map designed for strategic decision-making by public sector professionals.
 						</p>
 
@@ -180,14 +180,14 @@
 					</article>
 
 					<article class="timeline-item">
-						<header>
+						<header class="timeline-item-header">
 							<h3 class="projects-title" data-i18n="travelCalculatorTitle">Travel cost calculator</h3>
 							<div class="timeline-date">
 								<time datetime="2026-07" data-i18n="travelCalculatorTime">July 2026</time>
 							</div>
 						</header>
 
-						<p data-i18n="travelCalculatorParagraph">
+						<p class="projects-paragraph" data-i18n="travelCalculatorParagraph">
 							A web application built to calculate and share travel expenses. It supports multiple languages and enables unit conversion, saving trip history, and generating QR codes for easy cost splitting. This project, focused on <strong class="skill">JavaScript programming</strong>, helped me gain an understanding of <strong class="skill"><abbr title="Document Object Model">DOM</abbr> manipulation, event handling, and modules</strong>. To ensure clean code organization, I implemented the <abbr title="Model-View-Controller">MVC</abbr> architecture.
 						</p>
 
@@ -198,7 +198,7 @@
 					</article>
 
 					<article class="timeline-item personal-web">
-						<header>
+						<header class="timeline-item-header">
 							<h3 class="projects-title" data-i18n="personalWebTitle">Personal web</h3>
 							<div class="timeline-date">
 								<time datetime="2026-08" data-i18n="personalWebTime">August 2026</time>
@@ -206,7 +206,7 @@
 						</header>
 
 					
-						<p data-i18n="personalWebParagraph">
+						<p class="projects-paragraph" data-i18n="personalWebParagraph">
 							My personal interactive portfolio developed in <strong class="skill"><abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, and JavaScript</strong>. It features a minimalist <strong class="skill">responsive design</strong>, optimized for both mobile and desktop devices using a mobile-first approach. Key features include <strong class="skill">multi-language support</strong> and <strong class="skill">theme toggling</strong> between light and dark modes. Instant page loading and seamless indexing are ensured by <strong class="skill">100% valid and semantically clean code</strong> alongside full accessibility for assistive technologies.
 						</p>
 
@@ -229,21 +229,21 @@
 									<div class="value-circle">
 										<span>100</span>
 									</div>
-									<p data-i18n="pageAuditAccessibility">Accessibility</p>
+									<p class="page-statistic-name" data-i18n="pageAuditAccessibility">Accessibility</p>
 								</div>
 
 								<div class="page-statistic">
 									<div class="value-circle">
 										<span>100</span>
 									</div>
-									<p data-i18n="pageAuditBestPractises">Best practises</p>
+									<p class="page-statistic-name" data-i18n="pageAuditBestPractises">Best practises</p>
 								</div>
 
 								<div class="page-statistic">
 									<div class="value-circle">
 										<span>100</span>
 									</div>
-									<p data-i18n="pageAuditSEO"><abbr title="Search Engine Optimization">SEO</abbr></p>
+									<p class="page-statistic-name" data-i18n="pageAuditSEO"><abbr title="Search Engine Optimization">SEO</abbr></p>
 								</div>
 						</div>
 					</div>
@@ -262,7 +262,7 @@
 								<time datetime="2017">2017</time> – <time datetime="2025">2025</time>
 							</div>
 
-							<p data-i18n="grammarSchoolParagraph">8-Year General Grammar School</p>
+							<p class="education-paragraph" data-i18n="grammarSchoolParagraph">8-Year General Grammar School</p>
 						</div>
 
 						<div class="education-links">
@@ -278,7 +278,7 @@
 								<time datetime="2025">2025</time> – Present
 							</div>
 
-							<p data-i18n="UPOLparagraph">Bachelor's Degree in Geoinformatics and Cartography</p>
+							<p class="education-paragraph" data-i18n="UPOLparagraph">Bachelor's Degree in Geoinformatics and Cartography</p>
 						</div>
 						
 						<div class="education-links">
