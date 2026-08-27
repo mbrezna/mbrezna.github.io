@@ -95,7 +95,6 @@ abbr {
   background-image: var(--accent-gradient);
   border: none;
   color: white;
-  transition: background-image 0.5s ease;
 }
 
 .btn-primary:hover {

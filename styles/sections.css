@@ -7,13 +7,11 @@
 }
 
 .section-title,
-.hero-title, 
-.hero-subtitle {
+.hero-title {
   color: transparent;
   background-image: var(--accent-gradient);
   -webkit-background-clip: text;
   background-clip: text; /* twice the same property for browser compatibility */
-  transition: background-image 0.5s ease;
 }
 
 /* ----HERO-SECTION------------------------------------ */

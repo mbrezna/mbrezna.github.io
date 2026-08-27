@@ -21,8 +21,8 @@
   border-radius: 40px;
   box-shadow: 0 4px 20px var(--shadow-sm);
   /* glass effects */
-  backdrop-filter: blur(12px); 
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px); 
 
   transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
@@ -118,7 +118,6 @@
 .active-language {
   background-image: var(--accent-gradient);
   color: white;
-  transition: background-image 0.5s ease;
 }
 
 /* ----DISPLAY-MODE-TOGGLE-------------------------------- */
